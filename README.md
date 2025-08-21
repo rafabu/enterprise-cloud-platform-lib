@@ -1,2 +1,2 @@
 # enterprise-cloud-platform-lib
-Artefact Library
+Enterprise Cloud Platform - Artefact Library
