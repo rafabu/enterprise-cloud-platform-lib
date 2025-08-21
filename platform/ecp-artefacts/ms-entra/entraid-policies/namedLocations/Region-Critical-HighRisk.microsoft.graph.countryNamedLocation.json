@@ -1,5 +1,5 @@
 {
-     "definitionName": "Country-Critical-High",
+    "artefactName": "Country-Critical-High",
     "displayName": "Region: Critical - high risk",
     "countriesAndRegions": [
         "CN",

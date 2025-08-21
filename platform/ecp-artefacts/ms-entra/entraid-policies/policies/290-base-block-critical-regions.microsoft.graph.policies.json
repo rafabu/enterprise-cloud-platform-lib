@@ -1,5 +1,5 @@
 {
-    "archetypeName": "base-block-critical-regions",
+    "artefactName": "base-block-critical-regions",
     "displayName": "290 - all - base protection - all apps: block access from critical regions",
     "state": "enabled",
     "sessionControls": null,

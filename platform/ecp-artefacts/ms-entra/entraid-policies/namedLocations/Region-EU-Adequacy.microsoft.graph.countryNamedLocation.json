@@ -1,5 +1,5 @@
     {
-         "definitionName": "Region-EU-Adequacy",
+        "artefactName": "Region-EU-Adequacy",
         "displayName": "Region: EU Adequacy (EU + EU approved adequately protected countries - GB)",
         "countriesAndRegions": [
             "AT",
