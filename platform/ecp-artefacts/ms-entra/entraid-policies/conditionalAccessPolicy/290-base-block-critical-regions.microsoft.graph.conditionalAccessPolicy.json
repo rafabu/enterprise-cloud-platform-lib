@@ -31,9 +31,6 @@
             "excludeUsers": [
                 "cfbfbbbb-21af-4b70-b9fe-04cf0a9130a6"
             ],
-            "excludeUsers_reference": [
-                "tenant-emergency-admin-01"
-            ],
             "includeGroups": [],
             "excludeGroups": [],
             "includeRoles": [],
@@ -43,14 +40,9 @@
         },
         "locations": {
             "includeLocations": [
-                "198f89ef-431d-4d86-b531-a1076bf84da8",
-                "1d64c753-0f02-4834-9d2c-b973a4fb12ad",
-                "12702662-058b-46d8-b769-c2cbfe53066c"
-            ],
-            "includeLocations_reference": [
-                "Country-Critical-High",
-                "Country-Critical-Medium",
-                "Country-Critical-Elevated"
+                "<ECP_ARTEFACT>:Country-Critical-High",
+                "<ECP_ARTEFACT>:Country-Critical-Medium",
+                "<ECP_ARTEFACT>:Country-Critical-Elevated"
             ],
             "excludeLocations": []
         }
