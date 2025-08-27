@@ -29,7 +29,7 @@
                 "All"
             ],
             "excludeUsers": [
-                "cfbfbbbb-21af-4b70-b9fe-04cf0a9130a6"
+                "<USERPRINCIPALNAME>:padmin@3jf0g8.onmicrosoft.com"
             ],
             "includeGroups": [],
             "excludeGroups": [],
