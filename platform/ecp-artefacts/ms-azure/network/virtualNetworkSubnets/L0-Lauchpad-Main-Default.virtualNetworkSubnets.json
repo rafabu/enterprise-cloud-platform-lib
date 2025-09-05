@@ -1,5 +1,6 @@
 {
     "artefactName": "l0-lauchpad-main-default",
+    "name": "default",
     "virtualNetwork": {
         "artefactName": "l0-lauchpad-main"
     },
@@ -8,8 +9,8 @@
     ],
     "virtualNetworkAddressOffsets": [
         {
-            "netnum": 8,
-            "newbits": 24
+            "netnum": 0,
+            "newbits": 1
         }
     ],
     "defaultOutboundAccess": true,

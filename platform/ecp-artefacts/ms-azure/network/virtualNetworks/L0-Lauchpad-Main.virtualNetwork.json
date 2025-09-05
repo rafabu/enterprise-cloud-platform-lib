@@ -1,13 +1,14 @@
 {
     "artefactName": "l0-lauchpad-main",
+    "nameElement": "main",
     "addressSpace": {
         "addressPrefixes": [
             "10.0.0.0/24"
         ],
         "baseAddressOffsets": [
             {
-                "netnum": 8,
-                "newbits": 24
+                "netnum": 24,
+                "newbits": 8
             }
         ]
     },
