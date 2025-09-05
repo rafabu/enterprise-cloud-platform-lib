@@ -4,13 +4,10 @@
     "virtualNetwork": {
         "artefactName": "l0-lauchpad-main"
     },
-    "addressPrefixes": [
-        "10.0.0.0/24"
-    ],
-    "virtualNetworkAddressOffsets": [
+    "baseAddressOffsets": [
         {
-            "netnum": 0,
-            "newbits": 1
+            "netnum": 48,
+            "newbits": 10
         }
     ],
     "defaultOutboundAccess": true,
