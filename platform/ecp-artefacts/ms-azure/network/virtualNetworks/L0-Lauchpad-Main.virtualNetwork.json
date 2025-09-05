@@ -7,7 +7,7 @@
         ],
         "baseAddressOffsets": [
             {
-                "netnum": 24,
+                "netnum": 12,
                 "newbits": 8
             }
         ]
