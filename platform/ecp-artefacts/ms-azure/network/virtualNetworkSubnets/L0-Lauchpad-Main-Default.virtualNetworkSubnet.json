@@ -11,5 +11,7 @@
         }
     ],
     "defaultOutboundAccess": true,
-    "delegations": []
+    "delegations": [],
+    "privateEndpointNetworkPolicies": "Enabled",
+    "privateLinkServiceNetworkPolicies": "Enabled"
 }
