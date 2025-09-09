@@ -1,0 +1,17 @@
+{
+    "artefactName": "l0-lauchpad-ado-mpool-platform",
+    "name": "ado-mpool-platform",
+    "virtualNetwork": {
+        "artefactName": "l0-lauchpad-main"
+    },
+    "baseAddressOffsets": [
+        {
+            "netnum": 196,
+            "newbits": 12
+        }
+    ],
+    "defaultOutboundAccess": true,
+    "delegations": [],
+    "privateEndpointNetworkPolicies": "Enabled",
+    "privateLinkServiceNetworkPolicies": "Enabled"
+}
