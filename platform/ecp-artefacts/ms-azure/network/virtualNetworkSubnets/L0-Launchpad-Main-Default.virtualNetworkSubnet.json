@@ -1,8 +1,8 @@
 {
-    "artefactName": "l0-lauchpad-main-default",
+    "artefactName": "l0-launchpad-main-default",
     "name": "default",
     "virtualNetwork": {
-        "artefactName": "l0-lauchpad-main"
+        "artefactName": "l0-launchpad-main"
     },
     "baseAddressOffsets": [
         {

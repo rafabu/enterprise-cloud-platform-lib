@@ -1,8 +1,8 @@
 {
-    "artefactName": "l0-lauchpad-ado-mpool-platform",
+    "artefactName": "l0-launchpad-ado-mpool-platform",
     "name": "ado-mpool-platform",
     "virtualNetwork": {
-        "artefactName": "l0-lauchpad-main"
+        "artefactName": "l0-launchpad-main"
     },
     "baseAddressOffsets": [
         {
