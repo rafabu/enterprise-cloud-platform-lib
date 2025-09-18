@@ -1,0 +1,150 @@
+# Stage-level template to test TF backend access
+# This file is intended to be consumed from other pipelines.
+
+parameters:
+  # Optional variable group to import (resolved in the consuming pipeline's project)
+  variableGroup: ''
+  # Pool settings (can be overridden by variable group)
+  pool:
+    name: 'Default'
+    image: 'ubuntu-24.04'
+
+stages:
+- stage: s0
+  displayName: "Test"
+  variables:
+    # Defaults first; a variable group can override these
+    - name: ecp_ado_agent_pool_azure
+      value: ${{ parameters.pool.name }}
+    - name: ecp_ado_agent_pool_image
+      value: ${{ parameters.pool.image }}
+
+    # Include the variable group if provided, so it can override defaults
+    - ${{ if ne(parameters.variableGroup, '') }}:
+      - group: ${{ parameters.variableGroup }}
+
+  pool:
+    name: $(ecp_ado_agent_pool_azure)
+    demands:
+    - ImageOverride -equals $(ecp_ado_agent_pool_image)
+
+  jobs:
+  - job: tf_backend_access
+    displayName: Test Backend Access 
+    steps:
+    - task: Bash@3
+      displayName: 'ADO Agent Details'
+      inputs:
+        targetType: inline
+        script: |
+          echo "Hello dear DevOps enthusiast! This is a Bash@3 task"
+          echo "========================================================================================================="
+          echo " POOL_NAME:    $(ecp_ado_agent_pool_azure)"
+          echo " POOL_DEMANDS: ImageOverride -equals $(ecp_ado_agent_pool_image)"
+          echo " AGENT_NAME:   $AGENT_NAME"
+          echo " AGENT_OS:     $AGENT_OS"
+          echo " Agent NIC: "
+          ip route get 1.1.1.1 | awk '{for(i=1;i<=NF;i++){if($i=="dev"){iface=$(i+1)}; if($i=="src"){ip=$(i+1)}}} END{print "Interface:", iface, "\nIP Address:", ip, "\nHost Name:", system("hostname")}'
+          echo ""
+          echo " ecp_environment_name: $(ecp_environment_name)"
+          echo "========================================================================================================="
+          
+    - script: |
+        echo "===== public dns resolution test (nslookup) ====="
+        nslookup azureopendatastorage.blob.core.windows.net
+        echo "==================================================="
+      displayName: 'PUBLIC dns resolution test (azureopendatastorage.blob.core.windows.net)'
+
+    - task: Bash@3
+      displayName: 'tf backend setting extract'
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo "===== extract ecp_tf_backend_storage_azure_l0 ====="
+          fqdn=$(echo '$(ecp_tf_backend_storage_azure_l0)' | jq -r '.fqdn')
+          private_ip_address=$(echo '$(ecp_tf_backend_storage_azure_l0)' | jq -r '.private_ip_address')
+          tf_backend_container=$(echo '$(ecp_tf_backend_storage_azure_l0)' | jq -r '.tf_backend_container')
+          echo " fqdn: $fqdn"
+          echo " private_ip_address: $private_ip_address"
+          echo " tf_backend_container: $tf_backend_container"
+          echo ""
+          echo "===== add private IP address to /etc/hosts ====="
+          echo "$private_ip_address $fqdn" | sudo tee -a /etc/hosts
+          
+          # echo "===== set job-scoped variables ====="
+          echo "##vso[task.setvariable variable=fqdn]$fqdn"
+          echo "##vso[task.setvariable variable=private_ip_address]$private_ip_address"
+          echo "##vso[task.setvariable variable=tf_backend_container]$tf_backend_container"
+          echo "================================================="
+
+    - task: Bash@3
+      displayName: 'tf backend network test'
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo "===== testing TCP connectivity (TCP port 443) ====="
+          echo " blob FQDN: $(fqdn)"
+          nc -zv $(fqdn) 443
+          echo "==================================================="
+
+    - task: AzureCLI@2
+      displayName: tf backend write access test
+      inputs:
+        connectedServiceNameARM: $(ecp_ado_service_connection_azure_l0-contribute)
+        scriptType: pscore
+        scriptLocation: inlineScript
+        addSpnToEnvironment: true
+        visibleAzLogin: false
+        inlineScript: |
+          # Extract storage account name (substring before .blob.core.windows.net)
+          $storageAccountName = ("$(fqdn)" -split "\.")[0]
+          $storageAccountObj = az storage account show --subscription $(ecp_launchpad_azure_subscription_id) --name $storageAccountName --query "{id:id, name:name, resourceGroup:resourceGroup, location:primaryLocation, sku:sku.name}" --output json | ConvertFrom-Json
+          $containerName = "ecpaccesstest"
+
+          Write-Output ""
+          Write-Output "==================================="
+          Write-Output "=       az account show           ="
+          Write-Output "=       - AzureCLI@2 / pscore     ="
+          Write-Output "==================================="
+          Write-Output ""
+          az account show
+          Write-Output ""
+          Write-Output "==================================="
+          Write-Output "=    az role assignment list      ="
+          Write-Output "=    - storage account level      ="
+          Write-Output "==================================="
+          Write-Output ""
+          az role assignment list --subscription $(ecp_launchpad_azure_subscription_id) --assignee-object-id $(az ad sp show --id $env:servicePrincipalId --query id -o tsv) --scope $($storageAccountObj.id) --include-inherited -o table --query "[].{Role:roleDefinitionName,Scope:scope}"
+          Write-Output ""
+          Write-Output "==================================="
+          Write-Output "=  az storage account show        ="
+          Write-Output "==================================="
+          Write-Output ""
+          az storage account show --subscription $(ecp_launchpad_azure_subscription_id) --name $storageAccountName  --query "{name:name, resourceGroup:resourceGroup, location:primaryLocation, sku:sku.name}" --output table
+          Write-Output ""
+          Write-Output "==================================="
+          Write-Output "=  az storage blob upload test    ="
+          Write-Output "=  - private link connectivity    ="
+          Write-Output "==================================="
+          $exists = az storage container exists --subscription $(ecp_launchpad_azure_subscription_id) --name $containerName --account-name $storageAccountName --auth-mode login --query "exists" --output tsv
+          if ($exists -ne "true") {
+            az storage container create --subscription $(ecp_launchpad_azure_subscription_id) --name $containerName --account-name $storageAccountName --auth-mode login | Out-Null
+          }
+          $timestamp = Get-Date -Format "yyyyMMddHHmmss"
+          $blobName = "testblob-$timestamp.txt"
+          Set-Content -Path $blobName -Value "This is a sample blob created at $timestamp"
+          az storage blob upload --subscription $(ecp_launchpad_azure_subscription_id) --account-name $storageAccountName --auth-mode login --container-name $containerName --name $blobName --file $blobName | Out-Null
+          Write-Output ""
+          Write-Output "     created blob $containerName/$blobName on $storageAccountName"
+          Write-Output ""
+          $existsObj = az storage blob exists --subscription $(ecp_launchpad_azure_subscription_id) --account-name $storageAccountName --auth-mode login --container-name $containerName --name $blobName --output json | ConvertFrom-Json
+          if ($existsObj.exists) {
+            az storage blob delete --subscription $(ecp_launchpad_azure_subscription_id) --account-name $storageAccountName --auth-mode login --container-name $containerName --name $blobName
+            Write-Output "     deleted blob $containerName/$blobName on $storageAccountName (cleaning up)"
+          }
+          else {
+            Write-Output "     failed to write blob $containerName/$blobName on $storageAccountName"
+            throw "failed to write blob $containerName/$blobName on $storageAccountName"
+          }
+          Write-Output ""
+          Write-Output "==================================="
