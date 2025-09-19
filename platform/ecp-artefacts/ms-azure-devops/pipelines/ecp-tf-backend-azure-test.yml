@@ -1,36 +1,29 @@
-# Stage-level template to test TF backend access
-# This file is intended to be consumed from other pipelines.
+#### artefactName: ecp-tf-backend-azure-test ####
 
-parameters:
-  # Optional variable group to import (resolved in the consuming pipeline's project)
-  variableGroup: ''
-  # Pool settings (can be overridden by variable group)
-  pool:
-    name: 'Default'
-    image: 'ubuntu-24.04'
+# manual only pipeline
+trigger: none
+pr: none
+
+variables:
+  # Defaults (can be overridden by the variable group below)
+  - name: ecp_ado_agent_pool_azure
+    value: Default
+  - name: ecp_ado_agent_pool_image
+    value: ubuntu-24.04
+ 
+  - group: ecp_bootstrap_rabu-d7
+
+pool:
+  name: $(ecp_ado_agent_pool_azure)
+  demands:
+  - ImageOverride -equals $(ecp_ado_agent_pool_image)
 
 stages:
 - stage: s0
   displayName: "Test"
-  variables:
-    # Defaults first; a variable group can override these
-    - name: ecp_ado_agent_pool_azure
-      value: ${{ parameters.pool.name }}
-    - name: ecp_ado_agent_pool_image
-      value: ${{ parameters.pool.image }}
-
-    # Include the variable group if provided, so it can override defaults
-    - ${{ if ne(parameters.variableGroup, '') }}:
-      - group: ${{ parameters.variableGroup }}
-
-  pool:
-    name: $(ecp_ado_agent_pool_azure)
-    demands:
-    - ImageOverride -equals $(ecp_ado_agent_pool_image)
-
   jobs:
   - job: tf_backend_access
-    displayName: Test Backend Access 
+    displayName: Test Backend Access Azure 
     steps:
     - task: Bash@3
       displayName: 'ADO Agent Details'

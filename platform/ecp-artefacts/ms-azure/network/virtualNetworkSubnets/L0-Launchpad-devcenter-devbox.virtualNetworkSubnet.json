@@ -1,0 +1,17 @@
+{
+    "artefactName": "l0-launchpad-devcenter-devbox",
+    "name": "devbox",
+    "virtualNetwork": {
+        "artefactName": "l0-launchpad-main"
+    },
+    "baseAddressOffsets": [
+        {
+            "netnum": 197,
+            "newbits": 12
+        }
+    ],
+    "defaultOutboundAccess": true,
+    "delegations": [],
+    "privateEndpointNetworkPolicies": "Enabled",
+    "privateLinkServiceNetworkPolicies": "Enabled"
+}
