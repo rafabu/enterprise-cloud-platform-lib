@@ -1,5 +1,5 @@
 {
-    "artifactName": "ECP-Deployment-Testing-Disabled",
+    "artefactName": "ECP-Deployment-Testing-Disabled",
     "nameElement": "ECP Testing (disabled)",
     "path": "\\ECP-Testing",
     "process": {
