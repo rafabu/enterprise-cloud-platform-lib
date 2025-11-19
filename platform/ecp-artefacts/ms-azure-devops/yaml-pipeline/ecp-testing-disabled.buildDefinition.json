@@ -22,6 +22,7 @@
             "reportBuildStatus": "true"
         }
     },
+    "skipFirstRun": true,
     "triggers": [],
     "variables": {
         "environment": {
