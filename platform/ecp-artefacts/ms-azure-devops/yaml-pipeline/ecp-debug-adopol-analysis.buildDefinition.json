@@ -1,0 +1,27 @@
+{
+    "artefactName": "ECP-Debug-ADOPool-Analysis",
+    "nameElement": "ECP ADO Agent Pool Analysis",
+    "path": "\\ECP-Debug",
+    "process": {
+        "yamlFilename": "/pipelines-ado/ecp-debug-adopool-analysis.yaml"
+    },
+    "project": {
+        "__id": "c36c1fbd-afe6-4340-acba-9de8a3fe8628",
+        "name": "ECP"
+    },
+    "queue": {
+        "name": "rabu-d7-mpool-ecpalp-ado-mpool"
+    },
+    "queueStatus": "disabled",
+    "repository": {
+        "defaultBranch": "refs/heads/main",
+        "__id": "ffb3fa20-0605-48b4-8906-3faa3cce623e",
+        "name": "ECP.Automation",
+        "type": "TfsGit",
+        "properties": {
+            "reportBuildStatus": "true"
+        }
+    },
+    "skipFirstRun": true,
+    "triggers": []
+}
