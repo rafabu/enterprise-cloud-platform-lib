@@ -1,0 +1,22 @@
+{
+    "artefactName": "ECP-Deploy-Platform-Infrastructure",
+    "nameElement": "ECP Deploy Platform Infrastructure (Level 0-2) - <TERRAFORM_VARIABLE:ecp_environment_name>",
+    "path": "<TERRAFORM_RESOURCE_ATTRIBUTE_VALUE:azuredevops_build_folder.two.deploy_platform.path>",
+    "process": {
+        "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>ado/ecp-tg-deploy-platform-infrastructure.yaml"
+    },
+    "project": {
+        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
+    },
+    "queueStatus": "enabled",
+    "repository": {
+        "defaultBranch": "refs/heads/main",
+        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
+        "type": "TfsGit",
+        "properties": {
+            "reportBuildStatus": "true"
+        }
+    },
+    "skipFirstRun": true,
+    "triggers": []
+}
