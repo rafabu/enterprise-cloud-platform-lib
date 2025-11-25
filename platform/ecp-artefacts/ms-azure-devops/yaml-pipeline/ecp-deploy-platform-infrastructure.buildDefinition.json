@@ -1,7 +1,7 @@
 {
     "artefactName": "ECP-Deploy-Platform-Infrastructure",
     "nameElement": "ECP Deploy Platform Infrastructure (Level 0-2) - <TERRAFORM_VARIABLE:ecp_environment_name>",
-    "path": "<TERRAFORM_RESOURCE_ATTRIBUTE_VALUE:azuredevops_build_folder.two.deploy_platform.path>",
+    "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\deploy_platform",
     "process": {
         "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>ado/ecp-tg-deploy-platform-infrastructure.yaml"
     },
