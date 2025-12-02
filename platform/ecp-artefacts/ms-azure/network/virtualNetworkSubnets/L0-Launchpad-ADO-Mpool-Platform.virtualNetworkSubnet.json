@@ -10,7 +10,7 @@
             "newbits": 12
         }
     ],
-    "defaultOutboundAccess": true,
+    "defaultOutboundAccess": false,
     "delegations": [],
     "privateEndpointNetworkPolicies": "Enabled",
     "privateLinkServiceNetworkPolicies": "Enabled"
