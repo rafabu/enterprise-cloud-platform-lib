@@ -93,7 +93,9 @@
             "parent_id": "ecp-deployment-rabu-d7-platform"
         },
         {
-            "archetypes": [],
+            "archetypes": [
+                "ecp-launchpad"
+            ],
             "display_name": "Launchpad rabu-d7",
             "exists": false,
             "id": "ecp-deployment-rabu-d7-platform-launchpad",

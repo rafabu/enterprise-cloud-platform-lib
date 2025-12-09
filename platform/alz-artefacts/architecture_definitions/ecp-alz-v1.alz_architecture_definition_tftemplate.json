@@ -94,7 +94,7 @@
         },
         {
             "archetypes": [
-                "launchpad"
+                "ecp-launchpad"
             ],
             "display_name": "Launchpad ${ecp_environment_name}",
             "exists": false,
