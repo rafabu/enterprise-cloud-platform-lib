@@ -6,7 +6,7 @@
             "archetypes": [
                 "root"
             ],
-            "display_name": "ECP Deployment ${ecp_environment_name}",
+            "display_name": "Deployment ${ecp_environment_name}",
             "exists": false,
             "id": "ecp-deployment-${ecp_environment_name}",
             "parent_id": null
