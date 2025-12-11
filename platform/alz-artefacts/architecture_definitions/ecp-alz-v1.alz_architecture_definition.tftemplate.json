@@ -8,7 +8,7 @@
             ],
             "display_name": "Deployment ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}",
+            "id": "${ecp_environment_name}-mg-ecpa-deployment",
             "parent_id": null
         },
         {
@@ -17,17 +17,17 @@
             ],
             "display_name": "Platform ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform",
-            "parent_id": "ecp-deployment-${ecp_environment_name}"
+            "id": "${ecp_environment_name}-mg-ecpa-platform",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
         },
         {
             "archetypes": [
                 "landing_zones"
             ],
-            "display_name": "Landing zones ${ecp_environment_name}",
+            "display_name": "Application Landing Zones ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-landingzones",
-            "parent_id": "ecp-deployment-${ecp_environment_name}"
+            "id": "${ecp_environment_name}-mg-ecpa-landingzones",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
         },
         {
             "archetypes": [
@@ -35,8 +35,8 @@
             ],
             "display_name": "Corp ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-landingzones-corp",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-landingzones"
+            "id": "${ecp_environment_name}-mg-ecpa-landingzones-corp",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
         },
         {
             "archetypes": [
@@ -44,8 +44,8 @@
             ],
             "display_name": "Online ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-landingzones-online",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-landingzones"
+            "id": "${ecp_environment_name}-mg-ecpa-landingzones-online",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
         },
         {
             "archetypes": [
@@ -53,8 +53,8 @@
             ],
             "display_name": "Sandbox ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-sandbox",
-            "parent_id": "ecp-deployment-${ecp_environment_name}"
+            "id": "${ecp_environment_name}-mg-ecpa-sandbox",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
         },
         {
             "archetypes": [
@@ -62,8 +62,8 @@
             ],
             "display_name": "Security ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform-security",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-platform"
+            "id": "${ecp_environment_name}-mg-ecpa-platform-security",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
         },
         {
             "archetypes": [
@@ -71,8 +71,8 @@
             ],
             "display_name": "Management ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform-management",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-platform"
+            "id": "${ecp_environment_name}-mg-ecpa-platform-management",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
         },
         {
             "archetypes": [
@@ -80,8 +80,8 @@
             ],
             "display_name": "Connectivity ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform-connectivity",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-platform"
+            "id": "${ecp_environment_name}-mg-ecpa-platform-connectivity",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
         },
         {
             "archetypes": [
@@ -89,8 +89,8 @@
             ],
             "display_name": "Identity ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform-identity",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-platform"
+            "id": "${ecp_environment_name}-mg-ecpa-platform-identity",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
         },
         {
             "archetypes": [
@@ -98,8 +98,8 @@
             ],
             "display_name": "Launchpad ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-platform-launchpad",
-            "parent_id": "ecp-deployment-${ecp_environment_name}-platform"
+            "id": "${ecp_environment_name}-mg-ecpa-platform-launchpad",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
         },
         {
             "archetypes": [
@@ -107,8 +107,8 @@
             ],
             "display_name": "Decommissioned ${ecp_environment_name}",
             "exists": false,
-            "id": "ecp-deployment-${ecp_environment_name}-decommissioned",
-            "parent_id": "ecp-deployment-${ecp_environment_name}"
+            "id": "${ecp_environment_name}-mg-ecpa-decommissioned",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
         }
     ]
 }
