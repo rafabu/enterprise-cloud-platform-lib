@@ -24,7 +24,7 @@
             "archetypes": [
                 "landing_zones"
             ],
-            "display_name": "Application Landing Zones ${ecp_environment_name}",
+            "display_name": "Landing Zones ${ecp_environment_name}",
             "exists": false,
             "id": "${ecp_environment_name}-mg-ecpa-landingzones",
             "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
