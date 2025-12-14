@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/library_metadata.json",
+  "name": "ecp-alz-v1",
+  "display_name": "Enterprise Cloud Platform ALZ",
+  "description": "This library provides the reference set of Enterprise Cloud Platform (ECP) ALZ policies, archetypes, and management group architecture.",
+  "path": "platform/alz-artefacts",
+  "dependencies": [
+    {
+      "path": "platform/alz",
+      "ref": "2025.09.3"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/default_policy_values.json",
+  "defaults": [
+    {
+      "default_name": "private_dns_zone_id_azure_storage_blob",
+      "description": "The resource ID of the private DNS zone for Azure Blob Storage.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageBlobPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    }
+  ]
+}
