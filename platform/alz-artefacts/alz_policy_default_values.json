@@ -2,12 +2,663 @@
   "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/default_policy_values.json",
   "defaults": [
     {
+      "default_name": "private_dns_zone_id_azure_acr_registry",
+      "description": "The resource ID of the private DNS zone for Azure Container Registry.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAcrPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_ai_cog_svcs",
+      "description": "The resource ID of the private DNS zone for Azure Cognitive Services.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCognitiveServicesPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_app_configuration",
+      "description": "The resource ID of the private DNS zone for Azure App Configuration.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAppPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_app_service",
+      "description": "The resource ID of the private DNS zone for Azure App Service.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAppServicesPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_arc_guest_configuration",
+      "description": "The resource ID of the private DNS zone for Azure Arc Guest Configuration.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureArcGuestconfigurationPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_arc_hybrid_compute",
+      "description": "The resource ID of the private DNS zone for Azure Arc Hybrid Compute.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureArcHybridResourceProviderPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_arc_kubernetes",
+      "description": "The resource ID of the private DNS zone for Azure Arc Kubernetes Configuration.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureArcKubernetesConfigurationPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_automation",
+      "description": "The resource ID of the private DNS zone for Azure Automation.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAutomationWebhookPrivateDnsZoneId",
+            "azureAutomationDSCHybridPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_avd_feed_mgmt",
+      "description": "The resource ID of the private DNS zone for Azure Virtual Desktop.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureVirtualDesktopHostpoolPrivateDnsZoneId",
+            "azureVirtualDesktopWorkspacePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_batch",
+      "description": "The resource ID of the private DNS zone for Azure Batch.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureBatchPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_bot_svc_bot",
+      "description": "The resource ID of the private DNS zone for Azure Bot Service.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureBotServicePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_cosmos_db_cassandra",
+      "description": "The resource ID of the private DNS zone for Azure Cosmos DB Cassandra.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCosmosCassandraPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_cosmos_db_gremlin",
+      "description": "The resource ID of the private DNS zone for Azure Cosmos DB Gremlin.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCosmosGremlinPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_cosmos_db_mongo",
+      "description": "The resource ID of the private DNS zone for Azure Cosmos DB MongoDB.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCosmosMongoPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_cosmos_db_sql",
+      "description": "The resource ID of the private DNS zone for Azure Cosmos DB SQL.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCosmosSQLPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_cosmos_db_table",
+      "description": "The resource ID of the private DNS zone for Azure Cosmos DB Table.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCosmosTablePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_data_factory",
+      "description": "The resource ID of the private DNS zone for Azure Data Factory.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureDataFactoryPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_data_factory_portal",
+      "description": "The resource ID of the private DNS zone for Azure Data Factory Portal.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureDataFactoryPortalPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_data_lake_gen2",
+      "description": "The resource ID of the private DNS zone for Azure Data Lake Storage Gen2.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageDFSPrivateDnsZoneId",
+            "azureStorageDFSSecPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_databricks_ui_api",
+      "description": "The resource ID of the private DNS zone for Azure Databricks.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureDatabricksPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_digital_twins",
+      "description": "The resource ID of the private DNS zone for Azure Digital Twins.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_event_grid",
+      "description": "The resource ID of the private DNS zone for Azure Event Grid.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureEventGridTopicsPrivateDnsZoneId",
+            "azureEventGridDomainsPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_file_sync",
+      "description": "The resource ID of the private DNS zone for Azure File Sync.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureFilePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_grafana",
+      "description": "The resource ID of the private DNS zone for Azure Managed Grafana.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureManagedGrafanaWorkspacePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_hdinsight",
+      "description": "The resource ID of the private DNS zone for Azure HDInsight.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureHDInsightPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_iot_central",
+      "description": "The resource ID of the private DNS zone for Azure IoT Central.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureIotCentralPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_iot_hub",
+      "description": "The resource ID of the private DNS zone for Azure IoT Hub.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureIotHubsPrivateDnsZoneId",
+            "azureIotDeviceupdatePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_iot_hub_provisioning",
+      "description": "The resource ID of the private DNS zone for Azure IoT Hub Device Provisioning Service.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureIotPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_key_vault",
+      "description": "The resource ID of the private DNS zone for Azure Key Vault.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureKeyVaultPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_log_analytics",
+      "description": "The resource ID of the private DNS zone for Azure Log Analytics (OMS).",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_log_analytics_data",
+      "description": "The resource ID of the private DNS zone for Azure Log Analytics Data (ODS).",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_maria_db_server",
+      "description": "The resource ID of the private DNS zone for Azure Database for MariaDB.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_media_services_delivery",
+      "description": "The resource ID of the private DNS zone for Azure Media Services.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureMediaServicesKeyPrivateDnsZoneId",
+            "azureMediaServicesLivePrivateDnsZoneId",
+            "azureMediaServicesStreamPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_migration_service",
+      "description": "The resource ID of the private DNS zone for Azure Migrate.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureMigratePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_ml",
+      "description": "The resource ID of the private DNS zone for Azure Machine Learning.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureMachineLearningWorkspacePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_ml_notebooks",
+      "description": "The resource ID of the private DNS zone for Azure Machine Learning Notebooks.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureMachineLearningWorkspaceSecondPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_monitor",
+      "description": "The resource ID of the private DNS zone for Azure Monitor.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_monitor_agent",
+      "description": "The resource ID of the private DNS zone for Azure Monitor Agent.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_mysql_db_server",
+      "description": "The resource ID of the private DNS zone for Azure Database for MySQL.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_postgres_sql_server",
+      "description": "The resource ID of the private DNS zone for Azure Database for PostgreSQL.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_redis_cache",
+      "description": "The resource ID of the private DNS zone for Azure Cache for Redis.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureRedisCachePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_search",
+      "description": "The resource ID of the private DNS zone for Azure Cognitive Search.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureCognitiveSearchPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_service_hub",
+      "description": "The resource ID of the private DNS zone for Azure Service Bus.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureServiceBusNamespacePrivateDnsZoneId",
+            "azureEventHubNamespacePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_signalr_service",
+      "description": "The resource ID of the private DNS zone for Azure SignalR Service.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureSignalRPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_site_recovery",
+      "description": "The resource ID of the private DNS zone for Azure Site Recovery.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAsrPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_sql_server",
+      "description": "The resource ID of the private DNS zone for Azure SQL Database.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_static_web_apps",
+      "description": "The resource ID of the private DNS zone for Azure Static Web Apps.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
       "default_name": "private_dns_zone_id_azure_storage_blob",
       "description": "The resource ID of the private DNS zone for Azure Blob Storage.",
       "policy_assignments": [
         {
           "parameter_names": [
-            "azureStorageBlobPrivateDnsZoneId"
+            "azureStorageBlobPrivateDnsZoneId",
+            "azureStorageBlobSecPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_storage_file",
+      "description": "The resource ID of the private DNS zone for Azure File Storage.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageFilePrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_storage_queue",
+      "description": "The resource ID of the private DNS zone for Azure Queue Storage.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageQueuePrivateDnsZoneId",
+            "azureStorageQueueSecPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_storage_table",
+      "description": "The resource ID of the private DNS zone for Azure Table Storage.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageTablePrivateDnsZoneId",
+            "azureStorageTableSecondaryPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_storage_web",
+      "description": "The resource ID of the private DNS zone for Azure Web Storage.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureStorageStaticWebPrivateDnsZoneId",
+            "azureStorageStaticWebSecPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_synapse",
+      "description": "The resource ID of the private DNS zone for Azure Synapse Analytics.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_synapse_dev",
+      "description": "The resource ID of the private DNS zone for Azure Synapse Analytics Dev.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureSynapseDevPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_synapse_sql",
+      "description": "The resource ID of the private DNS zone for Azure Synapse Analytics SQL.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureSynapseSQLPrivateDnsZoneId",
+            "azureSynapseSQLODPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_web_pubsub",
+      "description": "The resource ID of the private DNS zone for Azure Web PubSub.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureWebPrivateDnsZoneId"
           ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
