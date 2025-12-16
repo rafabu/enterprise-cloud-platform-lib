@@ -196,6 +196,16 @@
       ]
     },
     {
+      "default_name": "private_dns_zone_id_azure_data_explorer",
+      "description": "The resource ID of the private DNS zone for Azure Data Explorer.",
+      "policy_assignments": [
+        {
+          "parameter_names": [],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
       "default_name": "private_dns_zone_id_azure_data_factory",
       "description": "The resource ID of the private DNS zone for Azure Data Factory.",
       "policy_assignments": [
