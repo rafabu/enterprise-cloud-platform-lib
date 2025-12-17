@@ -31,7 +31,7 @@
         },
         "type": "string"
       },
-            "azureAiServicesPrivateDnsZoneId": {
+      "azureAiServicesPrivateDnsZoneId": {
         "defaultValue": "",
         "metadata": {
           "description": "Private DNS Zone Identifier",
@@ -42,10 +42,9 @@
       },
       "dnsZoneNames": {
         "defaultValue": {
+          "azureCognitiveServicesPrivateDnsZoneId": "privatelink.cognitiveservices.azure.com",
           "azureOpenAiPrivateDnsZoneId": "privatelink.openai.azure.com",
-          "azureAksManagementPrivateDnsZoneId": "privatelink.{regionName}.azmk8s.io",
           "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com",
-          "azureApiManagementPrivateDnsZoneId": "privatelink.azure-api.net"
         },
         "metadata": {
           "description": "The list of private DNS zone names to be used for the Azure PaaS services.",
@@ -175,8 +174,7 @@
           },
           "privateDnsZoneId1": {
             "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureCognitiveServicesPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureCognitiveServicesPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
-          }
-          ,
+          },
           "privateDnsZoneId2": {
             "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureOpenAiPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureOpenAiPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
           },
