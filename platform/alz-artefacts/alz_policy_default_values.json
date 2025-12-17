@@ -99,6 +99,18 @@
       ]
     },
     {
+      "default_name": "private_dns_zone_id_azure_backup",
+      "description": "The resource ID of the private DNS zone for Azure Backup.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureSiteRecoveryBackupPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
       "default_name": "private_dns_zone_id_azure_avd_feed_mgmt",
       "description": "The resource ID of the private DNS zone for Azure Virtual Desktop.",
       "policy_assignments": [
@@ -367,7 +379,9 @@
       "description": "The resource ID of the private DNS zone for Azure Log Analytics (OMS).",
       "policy_assignments": [
         {
-          "parameter_names": [],
+          "parameter_names": [
+            "azureMonitorPrivateDnsZoneId2"
+          ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
       ]
@@ -377,7 +391,9 @@
       "description": "The resource ID of the private DNS zone for Azure Log Analytics Data (ODS).",
       "policy_assignments": [
         {
-          "parameter_names": [],
+          "parameter_names": [
+            "azureMonitorPrivateDnsZoneId3"
+          ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
       ]
@@ -447,7 +463,9 @@
       "description": "The resource ID of the private DNS zone for Azure Monitor.",
       "policy_assignments": [
         {
-          "parameter_names": [],
+          "parameter_names": [
+            "azureMonitorPrivateDnsZoneId1"
+          ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
       ]
@@ -457,7 +475,9 @@
       "description": "The resource ID of the private DNS zone for Azure Monitor Agent.",
       "policy_assignments": [
         {
-          "parameter_names": [],
+          "parameter_names": [
+            "azureMonitorPrivateDnsZoneId4"
+          ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
       ]
@@ -570,7 +590,10 @@
         {
           "parameter_names": [
             "azureStorageBlobPrivateDnsZoneId",
-            "azureStorageBlobSecPrivateDnsZoneId"
+            "azureStorageBlobSecPrivateDnsZoneId",
+            "azureDiskAccessPrivateDnsZoneId",
+            "azureMonitorPrivateDnsZoneId5",
+            "azureSiteRecoveryBlobPrivateDnsZoneId"
           ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
@@ -595,7 +618,8 @@
         {
           "parameter_names": [
             "azureStorageQueuePrivateDnsZoneId",
-            "azureStorageQueueSecPrivateDnsZoneId"
+            "azureStorageQueueSecPrivateDnsZoneId",
+            "azureSiteRecoveryQueuePrivateDnsZoneId"
           ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
         }
