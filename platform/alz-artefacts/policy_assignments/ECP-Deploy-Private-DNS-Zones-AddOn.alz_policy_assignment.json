@@ -1,0 +1,34 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2025-03-01",
+  "name": "ECP-Deploy-Private-DNS-Z",
+  "location": "${default_location}",
+  "dependsOn": [],
+  "identity": {
+    "type": "SystemAssigned"
+  },
+  "properties": {
+    "description": "This policy initiative is a group of policies that ensures private endpoints to Azure PaaS services are integrated with Azure Private DNS zones. This is an add-on to the ALZ policy set 'Deploy-Private-DNS-Zones' to include additional Azure PaaS services as per Enterprise Cloud Platform requirements.",
+    "displayName": "Configure Azure PaaS services to use private DNS zones (ECP Add-On)",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/placeholder/providers/Microsoft.Authorization/policySetDefinitions/ECP-Deploy-Private-DNS-Z",
+    "enforcementMode": "Default",
+    "nonComplianceMessages": [
+      {
+        "message": "Azure PaaS services {enforcementMode} use private DNS zones."
+      }
+    ],
+    "parameters": {
+      "azureCognitiveServicesPrivateDnsZoneId": {
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.cognitiveservices.azure.com"
+      },
+      "azureOpenAiPrivateDnsZoneId": {
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com"
+      },
+      "azureAiServicesPrivateDnsZoneId": {
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.services.ai.azure.com"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

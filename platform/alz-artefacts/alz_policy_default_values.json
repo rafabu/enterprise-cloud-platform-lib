@@ -22,6 +22,12 @@
             "azureCognitiveServicesPrivateDnsZoneId"
           ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        },
+        {
+          "parameter_names": [
+            "azureCognitiveServicesPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
         }
       ]
     },
@@ -695,6 +701,30 @@
             "azureWebPrivateDnsZoneId"
           ],
           "policy_assignment_name": "Deploy-Private-DNS-Zones"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_ai_oai",
+      "description": "The resource ID of the private DNS zone for Azure Cognitive Services (OpenAI Endpoint).",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureOpenAiPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
+        }
+      ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_ai_services",
+      "description": "The resource ID of the private DNS zone for Azure AI Services.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureAiServicesPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
         }
       ]
     }

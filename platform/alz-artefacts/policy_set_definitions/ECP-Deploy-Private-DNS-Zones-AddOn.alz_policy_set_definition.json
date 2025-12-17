@@ -1,0 +1,193 @@
+{
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "apiVersion": "2025-03-01",
+  "name": "ECP-Deploy-Private-DNS-Z",
+  "properties": {
+    "description": "This policy initiative is a group of policies that ensures private endpoints to Azure PaaS services are integrated with Azure Private DNS zones. This is an add-on to the ALZ policy set 'Deploy-Private-DNS-Zones' to include additional Azure PaaS services as per Enterprise Cloud Platform requirements.",
+    "displayName": "Configure Azure PaaS services to use private DNS zones (ECP Add-On)",
+    "metadata": {
+      "alzCloudEnvironments": [
+        "AzureCloud"
+      ],
+      "category": "Network",
+      "version": "1.0.0"
+    },
+    "parameters": {
+      "azureCognitiveServicesPrivateDnsZoneId": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "Private DNS Zone Identifier",
+          "displayName": "azureCognitiveServicesPrivateDnsZoneId",
+          "strongType": "Microsoft.Network/privateDnsZones"
+        },
+        "type": "string"
+      },
+      "azureOpenAiPrivateDnsZoneId": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "Private DNS Zone Identifier",
+          "displayName": "azureOpenAiPrivateDnsZoneId",
+          "strongType": "Microsoft.Network/privateDnsZones"
+        },
+        "type": "string"
+      },
+            "azureAiServicesPrivateDnsZoneId": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "Private DNS Zone Identifier",
+          "displayName": "azureAiServicesPrivateDnsZoneId",
+          "strongType": "Microsoft.Network/privateDnsZones"
+        },
+        "type": "string"
+      },
+      "dnsZoneNames": {
+        "defaultValue": {
+          "azureOpenAiPrivateDnsZoneId": "privatelink.openai.azure.com",
+          "azureAksManagementPrivateDnsZoneId": "privatelink.{regionName}.azmk8s.io",
+          "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com",
+          "azureApiManagementPrivateDnsZoneId": "privatelink.azure-api.net"
+        },
+        "metadata": {
+          "description": "The list of private DNS zone names to be used for the Azure PaaS services.",
+          "displayName": "DNS Zone Names"
+        },
+        "type": "object"
+      },
+      "dnsZoneRegion": {
+        "defaultValue": "changeme",
+        "metadata": {
+          "description": "The region where the private DNS zones are deployed. If this is specified, it will override any individual private DNS zone resource ids specified.",
+          "displayName": "Region"
+        },
+        "type": "string"
+      },
+      "dnsZoneResourceGroupName": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "The resource group where the private DNS zones are deployed. If this is specified, it will override any individual private DNS zone resource ids specified.",
+          "displayName": "Resource Group Name"
+        },
+        "type": "string"
+      },
+      "dnsZoneResourceType": {
+        "defaultValue": "Microsoft.Network/privateDnsZones",
+        "metadata": {
+          "description": "The resource type where the private DNS zones are deployed. If this is specified, it will override any individual private DNS zone resource ids specified.",
+          "displayName": "Resource Type"
+        },
+        "type": "string"
+      },
+      "dnsZoneSubscriptionId": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "The subscription id where the private DNS zones are deployed. If this is specified, it will override any individual private DNS zone resource ids specified.",
+          "displayName": "Subscription Id"
+        },
+        "type": "string"
+      },
+      "dnzZoneRegionShortNames": {
+        "defaultValue": {
+          "australiacentral": "acl",
+          "australiacentral2": "acl2",
+          "australiaeast": "ae",
+          "australiasoutheast": "ase",
+          "brazilsouth": "brs",
+          "brazilsoutheast": "bse",
+          "canadacentral": "cnc",
+          "canadaeast": "cne",
+          "centralindia": "inc",
+          "centralus": "cus",
+          "centraluseuap": "ccy",
+          "changeme": "changeme",
+          "chilecentral": "clc",
+          "eastasia": "ea",
+          "eastus": "eus",
+          "eastus2": "eus2",
+          "eastus2euap": "ecy",
+          "francecentral": "frc",
+          "francesouth": "frs",
+          "germanynorth": "gn",
+          "germanywestcentral": "gwc",
+          "israelcentral": "ilc",
+          "italynorth": "itn",
+          "japaneast": "jpe",
+          "japanwest": "jpw",
+          "koreacentral": "krc",
+          "koreasouth": "krs",
+          "malaysiasouth": "mys",
+          "malaysiawest": "myw",
+          "mexicocentral": "mxc",
+          "newzealandnorth": "nzn",
+          "northcentralus": "ncus",
+          "northeurope": "ne",
+          "norwayeast": "nwe",
+          "norwaywest": "nww",
+          "polandcentral": "plc",
+          "qatarcentral": "qac",
+          "southafricanorth": "san",
+          "southafricawest": "saw",
+          "southcentralus": "scus",
+          "southeastasia": "sea",
+          "southindia": "ins",
+          "spaincentral": "spc",
+          "swedencentral": "sdc",
+          "swedensouth": "sds",
+          "switzerlandnorth": "szn",
+          "switzerlandwest": "szw",
+          "taiwannorth": "twn",
+          "uaecentral": "uac",
+          "uaenorth": "uan",
+          "uksouth": "uks",
+          "ukwest": "ukw",
+          "westcentralus": "wcus",
+          "westeurope": "we",
+          "westindia": "inw",
+          "westus": "wus",
+          "westus2": "wus2",
+          "westus3": "wus3"
+        },
+        "metadata": {
+          "description": "Mapping of region to private DNS zone resource id. If the region is not specified, the default private DNS zone resource id will be used.",
+          "displayName": "Region Short Name Mapping"
+        },
+        "type": "object"
+      },
+      "effect": {
+        "allowedValues": [
+          "DeployIfNotExists",
+          "Disabled"
+        ],
+        "defaultValue": "DeployIfNotExists",
+        "metadata": {
+          "description": "Enable or disable the execution of the policy",
+          "displayName": "Effect"
+        },
+        "type": "string"
+      }
+    },
+    "policyDefinitions": [
+      {
+        "definitionVersion": "1.*.*",
+        "groupNames": [],
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effect')]"
+          },
+          "privateDnsZoneId1": {
+            "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureCognitiveServicesPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureCognitiveServicesPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
+          }
+          ,
+          "privateDnsZoneId2": {
+            "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureOpenAiPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureOpenAiPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
+          },
+          "privateDnsZoneId3": {
+            "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureAiServicesPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureAiServicesPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
+          }
+        },
+        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/ECP-DINE-Private-DNS-Azure-CognitiveServices-OpenAI",
+        "policyDefinitionReferenceId": "ECP-DINE-Private-DNS-Azure-CognitiveServices-OpenAI"
+      }
+    ],
+    "policyType": "Custom"
+  }
+}
