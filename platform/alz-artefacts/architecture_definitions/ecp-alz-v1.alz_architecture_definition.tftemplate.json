@@ -32,7 +32,8 @@
         },
         {
             "archetypes": [
-                "corp"
+                "corp",
+                "ecp-corp"
             ],
             "display_name": "Corp ${ecp_environment_name}",
             "exists": false,

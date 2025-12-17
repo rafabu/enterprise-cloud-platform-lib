@@ -41,7 +41,8 @@
         },
         {
             "archetypes": [
-                "corp"
+                "corp",
+                "ecp-corp
             ],
             "display_name": "Corp",
             "exists": false,
