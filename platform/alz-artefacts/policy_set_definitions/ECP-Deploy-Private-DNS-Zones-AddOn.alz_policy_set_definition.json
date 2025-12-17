@@ -44,7 +44,7 @@
         "defaultValue": {
           "azureCognitiveServicesPrivateDnsZoneId": "privatelink.cognitiveservices.azure.com",
           "azureOpenAiPrivateDnsZoneId": "privatelink.openai.azure.com",
-          "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com",
+          "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com"
         },
         "metadata": {
           "description": "The list of private DNS zone names to be used for the Azure PaaS services.",
