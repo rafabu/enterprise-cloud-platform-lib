@@ -184,8 +184,8 @@
             "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureAiServicesPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureAiServicesPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
           }
         },
-        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/ECP-DINE-Private-DNS-Azure-CognitiveServices-OpenAI",
-        "policyDefinitionReferenceId": "ECP-DINE-Private-DNS-Azure-CognitiveServices-OpenAI"
+        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/ECP-DINE-Private-DNS-Azure-AI-Services",
+        "policyDefinitionReferenceId": "ECP-DINE-Private-DNS-Azure-AI-Services"
       }
     ],
     "policyType": "Custom"

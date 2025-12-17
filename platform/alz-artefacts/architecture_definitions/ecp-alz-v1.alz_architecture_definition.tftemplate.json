@@ -4,7 +4,8 @@
     "management_groups": [
         {
             "archetypes": [
-                "root"
+                "root",
+                "ecp-root"
             ],
             "display_name": "Deployment ${ecp_environment_name}",
             "exists": false,
