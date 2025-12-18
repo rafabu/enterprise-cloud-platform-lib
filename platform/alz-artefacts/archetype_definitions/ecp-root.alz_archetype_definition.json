@@ -3,7 +3,8 @@
     "name": "ecp-root",
     "policy_assignments": [],
     "policy_definitions": [
-        "ECP-DINE-Private-DNS-Azure-AI-Services"
+        "ECP-DINE-Private-DNS-Azure-AI-Services",
+        "ECP-DINE-Private-DNS-Azure-API-Management"
     ],
     "policy_set_definitions": [
         "ECP-Deploy-Private-DNS-Z"
