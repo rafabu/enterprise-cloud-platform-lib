@@ -40,11 +40,21 @@
         },
         "type": "string"
       },
+      "azureApiManagementPrivateDnsZoneId": {
+        "defaultValue": "",
+        "metadata": {
+          "description": "Private DNS Zone Identifier",
+          "displayName": "azureApiManagementPrivateDnsZoneId",
+          "strongType": "Microsoft.Network/privateDnsZones"
+        },
+        "type": "string"
+      },
       "dnsZoneNames": {
         "defaultValue": {
           "azureCognitiveServicesPrivateDnsZoneId": "privatelink.cognitiveservices.azure.com",
           "azureOpenAiPrivateDnsZoneId": "privatelink.openai.azure.com",
-          "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com"
+          "azureAiServicesPrivateDnsZoneId": "privatelink.services.ai.azure.com",
+          "azureApiManagementPrivateDnsZoneId": "privatelink.azure-api.net"
         },
         "metadata": {
           "description": "The list of private DNS zone names to be used for the Azure PaaS services.",
@@ -184,6 +194,20 @@
         },
         "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/ECP-DINE-Private-DNS-Azure-AI-Services",
         "policyDefinitionReferenceId": "ECP-DINE-Private-DNS-Azure-AI-Services"
+      },
+      {
+        "definitionVersion": "1.*.*",
+        "groupNames": [],
+        "parameters": {
+          "effect": {
+            "value": "[parameters('effect')]"
+          },
+          "privateDnsZoneId": {
+            "value": "[if(equals(parameters('dnsZoneSubscriptionId'), ''), parameters('azureApiManagementPrivateDnsZoneId'), format('/subscriptions/{0}/resourceGroups/{1}/providers/{2}/{3}', parameters('dnsZoneSubscriptionId'), toLower(parameters('dnsZoneResourceGroupName')), parameters('dnsZoneResourceType'), replace(replace(parameters('dnsZoneNames').azureApiManagementPrivateDnsZoneId, '{regionName}', parameters('dnsZoneRegion')), '{regionCode}', parameters('dnzZoneRegionShortNames')[parameters('dnsZoneRegion')])))]"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/contoso/providers/Microsoft.Authorization/policyDefinitions/ECP-DINE-Private-DNS-Azure-API-Management",
+        "policyDefinitionReferenceId": "ECP-DINE-Private-DNS-Azure-API-Management"
       }
     ],
     "policyType": "Custom"

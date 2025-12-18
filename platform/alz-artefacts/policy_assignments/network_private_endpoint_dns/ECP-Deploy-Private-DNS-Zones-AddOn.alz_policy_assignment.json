@@ -26,6 +26,9 @@
       },
       "azureAiServicesPrivateDnsZoneId": {
         "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.services.ai.azure.com"
+      },
+      "azureApiManagementPrivateDnsZoneId": {
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.azure-api.net"
       }
     },
     "scope": "/providers/Microsoft.Management/managementGroups/placeholder",

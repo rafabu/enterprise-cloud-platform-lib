@@ -727,6 +727,18 @@
           "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
         }
       ]
+    },
+    {
+      "default_name": "private_dns_zone_id_azure_api_management",
+      "description": "The resource ID of the private DNS zone for Azure API Management.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "azureApiManagementPrivateDnsZoneId"
+          ],
+          "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
+        }
+      ]
     }
   ]
 }
