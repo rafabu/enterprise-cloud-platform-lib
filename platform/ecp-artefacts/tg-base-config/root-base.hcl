@@ -53,6 +53,4 @@ remote_state {
 
 inputs = {
   basename-root = "root-name"
-
-
 }
