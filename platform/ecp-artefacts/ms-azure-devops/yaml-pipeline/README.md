@@ -37,11 +37,10 @@ Artefact deployment will use the `azuredevops_build_definition` terraform resour
 - **repository**
   - **type** (defaults to `TfsGit`)
   - **defaultBranch** (defaults to `refs/heads/main`)
-- **process**
-  - **yamlFilename**
-- **repository**
   - **properties:**
     - **reportBuildStatus** (defaults to `true`)
+- **process**
+  - **yamlFilename**
 - **variableGroups** (defaults to `[]`)
 - **variables** (defaults to `{}` - key becomes name)
   - **value**
