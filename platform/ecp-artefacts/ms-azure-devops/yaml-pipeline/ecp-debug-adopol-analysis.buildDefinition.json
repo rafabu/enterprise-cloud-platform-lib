@@ -11,7 +11,7 @@
     "queue": {
         "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_pool_name>"
     },
-    "queueStatus": "disabled",
+    "queueStatus": "enabled",
     "repository": {
         "defaultBranch": "refs/heads/main",
        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
