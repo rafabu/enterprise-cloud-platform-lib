@@ -20,7 +20,7 @@ To disable files in this library completely, it is suggested to follow the name 
 
 The JSON format is based on the REST schema of [Azure DevOps Build Definitions API](https://learn.microsoft.com/en-us/rest/api/azure/devops/build/definitions/create?view=azure-devops-rest-7.1) with only the following, mandatory properties added:
 
-- `artefactName` for the artefactName
+- `artefactName` as the unique internal identifier used by the ECP deployment to reference this build definition artefact
 - `nameElement` becoming `displayName`
 
 ## Supported Properties
