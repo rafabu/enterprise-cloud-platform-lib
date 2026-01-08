@@ -1,0 +1,28 @@
+{
+    "artefactName": "ECP-YAML-Pipeline-Example-Enabled",
+    "nameElement": "ECP Example (enabled)",
+    "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\examples",
+    "process": {
+        "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/examples/ecp-yaml-pipeline_example.yaml"
+    },
+    "project": {
+        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
+    },
+    "queueStatus": "enabled",
+    "repository": {
+        "defaultBranch": "refs/heads/main",
+        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
+        "type": "TfsGit",
+        "properties": {
+            "reportBuildStatus": "true"
+        }
+    },
+    "skipFirstRun": true,
+    "triggers": [],
+    "variables": {
+        "environment": {
+            "allowOverride": true,
+            "value": "dev"
+        }
+    }
+}
