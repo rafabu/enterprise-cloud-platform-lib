@@ -1,0 +1,19 @@
+{
+    "artefactName": "l2-connectivity-vwan-hub",
+    "addressSpace": {
+        "baseAddressOffsets": [
+            {
+                "netnum": 7,
+                "newbits": 0
+            }
+        ]
+    },
+    "dhcpOptions": {
+        "dnsServers": []
+    },
+    "encryption": {
+        "enabled": "true",
+        "enforcement": "AllowUnencrypted"
+    },
+    "privateEndpointVNetPolicies": "'Basic"
+}
