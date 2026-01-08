@@ -3,8 +3,8 @@
     "addressSpace": {
         "baseAddressOffsets": [
             {
-                "netnum": 7,
-                "newbits": 0
+                "netnum": 0,
+                "newbits": 7
             }
         ]
     },
