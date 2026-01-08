@@ -1,6 +1,6 @@
 {
     "artefactName": "ECP-Debug-ADOPool-Analysis",
-    "nameElement": "ECP ADO Agent Pool Analysis",
+    "nameElement": "ECP ADO Agent Pool Analysis - <TERRAFORM_VARIABLE:ecp_environment_name>",
     "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\insights",
     "process": {
         "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-debug-adopool-analysis.yaml"
@@ -11,7 +11,7 @@
     "queue": {
         "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_pool_name>"
     },
-    "queueStatus": "disabled",
+    "queueStatus": "enabled",
     "repository": {
         "defaultBranch": "refs/heads/main",
        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
