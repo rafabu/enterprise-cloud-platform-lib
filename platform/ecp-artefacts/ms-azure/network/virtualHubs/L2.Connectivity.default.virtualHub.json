@@ -2,18 +2,12 @@
     "artefactName": "l2-connectivity-default-vwan-hub",
     "nameElement": "",
 
-    "virtualHubRouteTableV2s": [],
-    "addressPrefix": "<ECP_ARTEFACT>:l2-connectivity-vwan-hub",
-    
-    "__routeTable": {
-        "routes": []
-    },
-    "__virtualRouterAutoScaleConfiguration": {
-        "minCapacity": 2
-    },
-    
-    "sku": "Basic",
+    "location": "<ECP_PARAMETER>:azure_location",
 
-    "__allowBranchToBranchTraffic": false,
-    "__hubRoutingPreference": "ExpressRoute"
+    "addressPrefix": "<ECP_ARTEFACT>:l2-connectivity-vwan-hub",
+    "hubRoutingPreference": "ExpressRoute",    
+    "sku": "Basic",
+    "virtualRouterAutoScaleConfiguration": {
+        "minCapacity": 2
+    }
 }
