@@ -2,7 +2,7 @@
     "artefactName": "l2-connectivity-default-vwan-hub",
     "nameElement": "",
 
-    "location": "<ECP_PARAMETER>:azure_location",
+    "location": "default",
 
     "addressPrefix": "<ECP_ARTEFACT>:l2-connectivity-vwan-hub",
     "hubRoutingPreference": "ExpressRoute",    
