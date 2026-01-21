@@ -3,7 +3,7 @@
     "nameElement": "",
 
     "location": "default",
-
+    
     "bgpSettings": {
         "asn": 65515,
         "peerWeight": 0,
@@ -18,13 +18,11 @@
             }
         ]
     },
-   
     "enableBgpRouteTranslationForNat": false,
     "isRoutingPreferenceInternet": false,
     "natRules": [],
-    
     "virtualHub": {
-         "id": "<ECP_ARTEFACT>:l2-connectivity-default-vwan-hub"
+        "id": "<ECP_ARTEFACT>:l2-connectivity-default-vwan-hub"
     },
-     "vpnGatewayScaleUnit": 1
+    "vpnGatewayScaleUnit": 1
 }
