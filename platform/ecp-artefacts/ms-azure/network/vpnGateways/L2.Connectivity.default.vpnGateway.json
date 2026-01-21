@@ -1,6 +1,9 @@
 {
     "artefactName": "l2-connectivity-default-vpnGateway",
     "nameElement": "",
+
+    "location": "default",
+
     "bgpSettings": {
         "asn": 65515,
         "peerWeight": 0,
