@@ -1,17 +1,16 @@
 {
     "artefactName": "l2-connectivity-example-staticrouting-vpnsite",
     "name": "ECP-Example-StaticRouting",
-
     "location": "default",
-    
     "addressSpace": {
         "addressPrefixes": [
-            "192.0.2.0/24"
+            "192.0.2.0/26",
+            "192.0.2.128/26"
         ]
     },
     "deviceProperties": {
-        "deviceModel": "ExampleModel",
-        "deviceVendor": "ExampleVendor"
+        "deviceModel": "ExampleModel (optional)",
+        "deviceVendor": "ExampleVendor (optional)"
     },
     "o365Policy": null,
     "vpnSiteLinks": [
