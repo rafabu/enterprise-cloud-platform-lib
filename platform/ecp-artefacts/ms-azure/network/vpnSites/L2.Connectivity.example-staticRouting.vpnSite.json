@@ -1,9 +1,9 @@
 {
     "artefactName": "l2-connectivity-example-staticrouting-vpnsite",
     "name": "ECP-Example-StaticRouting",
-    
-    "location": "default",
 
+    "location": "default",
+    
     "addressSpace": {
         "addressPrefixes": [
             "192.0.2.0/24"
@@ -13,14 +13,16 @@
         "deviceModel": "ExampleModel",
         "deviceVendor": "ExampleVendor"
     },
-    "virtualWan": {
-        "id": null
-    },
     "o365Policy": null,
     "vpnSiteLinks": [
         {
             "name": "link1",
             "properties": {
+                "bgpProperties": {
+                    "asn": 64512,
+                    "bgpPeeringAddress": "169.254.2.251"
+                },
+                "fqdn": null,
                 "ipAddress": "192.0.2.2",
                 "linkProperties": {
                     "linkProviderName": "ProviderExample1",
@@ -31,7 +33,11 @@
         {
             "name": "link2",
             "properties": {
-                "ipAddress": "192.0.2.3",
+                "bgpProperties": {
+                    "asn": 64513,
+                    "bgpPeeringAddress": "169.254.2.252"
+                },
+                "fqdn": null,
                 "linkProperties": {
                     "linkProviderName": "ProviderExample2",
                     "linkSpeedInMbps": 128
