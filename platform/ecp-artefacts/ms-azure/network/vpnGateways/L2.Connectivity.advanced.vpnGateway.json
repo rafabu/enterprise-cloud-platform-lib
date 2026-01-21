@@ -1,6 +1,5 @@
 {
-    "artefactName": "l2-connectivity-default-vpnGateway",
-    "nameElement": "",
+    "artefactName": "l2-connectivity-advanced-example-vpnGateway",
 
     "location": "default",
 
@@ -11,13 +10,13 @@
             {
                 "ipconfigurationId": "Instance0",
                 "customBgpIpAddresses": [
-                    "192.0.2.253"
+                    "169.254.2.253"
                 ]
             },
             {
                 "ipconfigurationId": "Instance1",
                 "customBgpIpAddresses": [
-                    "192.0.2.254"
+                    "169.254.2.254"
                 ]
             }
         ]
