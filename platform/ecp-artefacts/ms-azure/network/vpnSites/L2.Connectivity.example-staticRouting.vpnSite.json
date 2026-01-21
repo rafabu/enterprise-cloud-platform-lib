@@ -1,0 +1,40 @@
+{
+    "artefactName": "l2-connectivity-example-staticrouting-vpnsite",
+    "name": "ECP-Example-StaticRouting",
+    
+    "addressSpace": {
+        "addressPrefixes": [
+            "192.0.2.0/24"
+        ]
+    },
+    "deviceProperties": {
+        "deviceModel": "ExampleModel",
+        "deviceVendor": "ExampleVendor"
+    },
+    "virtualWan": {
+        "id": null
+    },
+    "o365Policy": null,
+    "vpnSiteLinks": [
+        {
+            "name": "link1",
+            "properties": {
+                "ipAddress": "192.0.2.2",
+                "linkProperties": {
+                    "linkProviderName": "ProviderExample1",
+                    "linkSpeedInMbps": 256
+                }
+            }
+        },
+        {
+            "name": "link2",
+            "properties": {
+                "ipAddress": "192.0.2.3",
+                "linkProperties": {
+                    "linkProviderName": "ProviderExample2",
+                    "linkSpeedInMbps": 128
+                }
+            }
+        }
+    ]
+}
