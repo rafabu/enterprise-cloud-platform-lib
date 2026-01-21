@@ -2,6 +2,8 @@
     "artefactName": "l2-connectivity-example-staticrouting-vpnsite",
     "name": "ECP-Example-StaticRouting",
     
+    "location": "default",
+
     "addressSpace": {
         "addressPrefixes": [
             "192.0.2.0/24"
