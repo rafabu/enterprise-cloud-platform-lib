@@ -3,18 +3,22 @@
     "nameElement": "",
 
     "location": "default",
-    
+
     "bgpSettings": {
         "asn": 65515,
         "peerWeight": 0,
         "bgpPeeringAddresses": [
             {
                 "ipconfigurationId": "Instance0",
-                "customBgpIpAddresses": []
+                "customBgpIpAddresses": [
+                    "192.0.2.253"
+                ]
             },
             {
                 "ipconfigurationId": "Instance1",
-                "customBgpIpAddresses": []
+                "customBgpIpAddresses": [
+                    "192.0.2.254"
+                ]
             }
         ]
     },
