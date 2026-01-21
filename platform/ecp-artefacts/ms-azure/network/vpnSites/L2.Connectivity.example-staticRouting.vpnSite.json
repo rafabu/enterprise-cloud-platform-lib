@@ -37,6 +37,7 @@
                     "bgpPeeringAddress": "169.254.2.252"
                 },
                 "fqdn": null,
+                "ipAddress": "192.0.2.3",
                 "linkProperties": {
                     "linkProviderName": "ProviderExample2",
                     "linkSpeedInMbps": 128

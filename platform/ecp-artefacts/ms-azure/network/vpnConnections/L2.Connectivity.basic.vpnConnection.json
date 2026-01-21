@@ -1,0 +1,68 @@
+{
+    "artefactName": "l2-connectivity-example-vpnConnection",
+    "nameElement": "",
+    
+    "remoteVpnSite": {
+        "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite"
+    },
+    "vpnLinkConnections": [
+        {
+            "properties": {
+                "vpnSiteLink": {
+                    "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite:link1"
+                },
+                "connectionBandwidth": 10,
+                "ipsecPolicies": [
+                    {
+                        "saLifeTimeSeconds": 27000,
+                        "saDataSizeKilobytes": 0,
+                        "ipsecEncryption": "GCMAES256",
+                        "ipsecIntegrity": "GCMAES256",
+                        "ikeEncryption": "AES256",
+                        "ikeIntegrity": "SHA384",
+                        "dhGroup": "DHGroup14",
+                        "pfsGroup": "PFS14"
+                    }
+                ],
+                "vpnConnectionProtocolType": "IKEv2",
+                "enableBgp": false,
+                "enableRateLimiting": false,
+                "useLocalAzureIpAddress": false,
+                "usePolicyBasedTrafficSelectors": false,
+                "routingWeight": 0,
+                "dpdTimeoutSeconds": 0,
+                "vpnLinkConnectionMode": "Default",
+                "vpnGatewayCustomBgpAddresses": []
+            }
+        },
+        {
+            "properties": {
+                "vpnSiteLink": {
+                    "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite:link2"
+                },
+                "connectionBandwidth": 10,
+                "ipsecPolicies": [
+                    {
+                        "saLifeTimeSeconds": 27000,
+                        "saDataSizeKilobytes": 0,
+                        "ipsecEncryption": "GCMAES256",
+                        "ipsecIntegrity": "GCMAES256",
+                        "ikeEncryption": "AES256",
+                        "ikeIntegrity": "SHA384",
+                        "dhGroup": "DHGroup14",
+                        "pfsGroup": "PFS14"
+                    }
+                ],
+                "vpnConnectionProtocolType": "IKEv2",
+                "enableBgp": false,
+                "enableRateLimiting": false,
+                "useLocalAzureIpAddress": false,
+                "usePolicyBasedTrafficSelectors": false,
+                "routingWeight": 0,
+                "dpdTimeoutSeconds": 0,
+                "vpnLinkConnectionMode": "Default",
+                "vpnGatewayCustomBgpAddresses": []
+            }
+        }
+    ]
+}
