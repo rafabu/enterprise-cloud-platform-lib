@@ -12,12 +12,7 @@
     },
     "vpnLinkConnections": [
         {
-            "name": "link1-connection",
             "properties": {
-                "vpnSiteLink": {
-                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link1",
-                    "name": "link1"
-                },
                 "connectionBandwidth": 10,
                 "ipsecPolicies": [
                     {
@@ -43,12 +38,7 @@
             }
         },
         {
-            "name": "link2-connection",
             "properties": {
-                "vpnSiteLink": {
-                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link2",
-                    "name": "link2"
-                },
                 "connectionBandwidth": 10,
                 "ipsecPolicies": [
                     {
