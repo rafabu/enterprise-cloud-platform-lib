@@ -4,8 +4,8 @@
     "location": "default",
     
     "deviceProperties": {
-        "deviceModel": "ExampleModel (optional)",
-        "deviceVendor": "ExampleVendor (optional)"
+        "deviceModel": "Example Model (optional)",
+        "deviceVendor": "Example Vendor (optional)"
     },
     "o365Policy": null,
     "vpnSiteLinks": [
@@ -19,7 +19,7 @@
                 "fqdn": null,
                 "ipAddress": "192.0.2.4",
                 "linkProperties": {
-                    "linkProviderName": "ProviderExample1",
+                    "linkProviderName": "Provider Example",
                     "linkSpeedInMbps": 256
                 }
             }
@@ -34,7 +34,7 @@
                 "fqdn": null,
                 "ipAddress": "192.0.2.5",
                 "linkProperties": {
-                    "linkProviderName": "ProviderExample2",
+                    "linkProviderName": "Provider Example",
                     "linkSpeedInMbps": 128
                 }
             }

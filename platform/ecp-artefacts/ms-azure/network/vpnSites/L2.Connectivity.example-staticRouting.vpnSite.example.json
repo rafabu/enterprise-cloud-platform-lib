@@ -24,7 +24,7 @@
                 "fqdn": null,
                 "ipAddress": "192.0.2.2",
                 "linkProperties": {
-                    "linkProviderName": "ProviderExample1",
+                    "linkProviderName": "Provider Example",
                     "linkSpeedInMbps": 256
                 }
             }
@@ -39,7 +39,7 @@
                 "fqdn": null,
                 "ipAddress": "192.0.2.3",
                 "linkProperties": {
-                    "linkProviderName": "ProviderExample2",
+                    "linkProviderName": "Provider Example",
                     "linkSpeedInMbps": 128
                 }
             }
