@@ -1,0 +1,77 @@
+{
+    "artefactName": "l2-connectivity-example2-vpnConnection",
+
+    "location": "default",
+
+    "vpnGateway": {
+        "id": "<ECP_ARTEFACT>:l2-connectivity-basic-example-vpnGateway"
+    },
+    
+    "remoteVpnSite": {
+        "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite"
+    },
+    "vpnLinkConnections": [
+        {
+            "name": "link1-connection",
+            "properties": {
+                "vpnSiteLink": {
+                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link1",
+                    "name": "link1"
+                },
+                "connectionBandwidth": 10,
+                "ipsecPolicies": [
+                    {
+                        "saLifeTimeSeconds": 27000,
+                        "saDataSizeKilobytes": 102400000,
+                        "ipsecEncryption": "GCMAES256",
+                        "ipsecIntegrity": "GCMAES256",
+                        "ikeEncryption": "AES256",
+                        "ikeIntegrity": "SHA256",
+                        "dhGroup": "DHGroup24",
+                        "pfsGroup": "PFS24"
+                    }
+                ],
+                "vpnConnectionProtocolType": "IKEv2",
+                "enableBgp": false,
+                "enableRateLimiting": false,
+                "useLocalAzureIpAddress": false,
+                "usePolicyBasedTrafficSelectors": false,
+                "routingWeight": 0,
+                "dpdTimeoutSeconds": 0,
+                "vpnLinkConnectionMode": "Default",
+                "vpnGatewayCustomBgpAddresses": []
+            }
+        },
+        {
+            "name": "link2-connection",
+            "properties": {
+                "vpnSiteLink": {
+                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link2",
+                    "name": "link2"
+                },
+                "connectionBandwidth": 10,
+                "ipsecPolicies": [
+                    {
+                        "saLifeTimeSeconds": 27000,
+                        "saDataSizeKilobytes": 102400000,
+                        "ipsecEncryption": "GCMAES256",
+                        "ipsecIntegrity": "GCMAES256",
+                        "ikeEncryption": "AES256",
+                        "ikeIntegrity": "SHA256",
+                        "dhGroup": "DHGroup24",
+                        "pfsGroup": "PFS24"
+                    }
+                ],
+                "vpnConnectionProtocolType": "IKEv2",
+                "enableBgp": false,
+                "enableRateLimiting": false,
+                "useLocalAzureIpAddress": false,
+                "usePolicyBasedTrafficSelectors": false,
+                "routingWeight": 0,
+                "dpdTimeoutSeconds": 0,
+                "vpnLinkConnectionMode": "Default",
+                "vpnGatewayCustomBgpAddresses": []
+            }
+        }
+    ]
+}
