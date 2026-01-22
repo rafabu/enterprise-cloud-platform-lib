@@ -1,15 +1,21 @@
 {
     "artefactName": "l2-connectivity-example-vpnConnection",
-    "nameElement": "",
+
+    "location": "default",
+
+    "vpnGateway": {
+        "id": "<ECP_ARTEFACT>:l2-connectivity-basic-example-vpnGateway"
+    },
     
     "remoteVpnSite": {
-        "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite"
+        "id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite"
     },
     "vpnLinkConnections": [
         {
             "properties": {
                 "vpnSiteLink": {
-                    "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite:link1"
+                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link1",
+                    "name": "link1"
                 },
                 "connectionBandwidth": 10,
                 "ipsecPolicies": [
@@ -38,7 +44,8 @@
         {
             "properties": {
                 "vpnSiteLink": {
-                    "id": "<ECP_ARTEFACT>:l2-connectivity-example-staticrouting-vpnsite:link2"
+                    "__id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite:link2",
+                    "name": "link2"
                 },
                 "connectionBandwidth": 10,
                 "ipsecPolicies": [
