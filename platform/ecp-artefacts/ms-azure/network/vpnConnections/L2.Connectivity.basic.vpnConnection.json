@@ -22,13 +22,13 @@
                 "ipsecPolicies": [
                     {
                         "saLifeTimeSeconds": 27000,
-                        "saDataSizeKilobytes": 0,
+                        "saDataSizeKilobytes": 102400000,
                         "ipsecEncryption": "GCMAES256",
                         "ipsecIntegrity": "GCMAES256",
                         "ikeEncryption": "AES256",
-                        "ikeIntegrity": "SHA384",
-                        "dhGroup": "DHGroup14",
-                        "pfsGroup": "PFS14"
+                        "ikeIntegrity": "SHA256",
+                        "dhGroup": "DHGroup24",
+                        "pfsGroup": "PFS24"
                     }
                 ],
                 "vpnConnectionProtocolType": "IKEv2",
@@ -53,13 +53,13 @@
                 "ipsecPolicies": [
                     {
                         "saLifeTimeSeconds": 27000,
-                        "saDataSizeKilobytes": 0,
+                        "saDataSizeKilobytes": 102400000,
                         "ipsecEncryption": "GCMAES256",
                         "ipsecIntegrity": "GCMAES256",
                         "ikeEncryption": "AES256",
-                        "ikeIntegrity": "SHA384",
-                        "dhGroup": "DHGroup14",
-                        "pfsGroup": "PFS14"
+                        "ikeIntegrity": "SHA256",
+                        "dhGroup": "DHGroup24",
+                        "pfsGroup": "PFS24"
                     }
                 ],
                 "vpnConnectionProtocolType": "IKEv2",
