@@ -3,7 +3,7 @@
 
     "location": "default",
 
-    "vpnGateway": {
+    "__vpnGateway": {
         "id": "<ECP_ARTEFACT>:l2-connectivity-basic-example-vpnGateway"
     },
     
