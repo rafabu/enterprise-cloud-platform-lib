@@ -1,11 +1,11 @@
 {
     "artefactName": "l2-connectivity-default-vwan-hub",
     "nameElement": "",
-    
+
     "location": "default",
     "addressPrefix": "<ECP_ARTEFACT>:l2-connectivity-vwan-hub",
     "hubRoutingPreference": "ExpressRoute",
-    "sku": "Basic",
+    "__sku": "Standard",
     "virtualRouterAutoScaleConfiguration": {
         "minCapacity": 2
     }
