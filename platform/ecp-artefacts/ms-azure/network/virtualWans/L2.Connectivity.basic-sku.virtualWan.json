@@ -1,8 +1,8 @@
 {
-    "artefactName": "l2-connectivity-vwan-standard",
+    "artefactName": "l2-connectivity-vwan-basic-sku",
     "location": "default",
 
-    "type": "Standard",
+    "type": "Basic",
 
     "allowBranchToBranchTraffic": true,
     "disableVpnEncryption": false,
