@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_definition.json",
+    "name": "ecp-platform",
+    "policy_assignments": [
+        "Deploy-Private-DNS-Zones",
+        "ECP-Deploy-Private-DNS-Z"
+    ],
+    "policy_definitions": [],
+    "policy_set_definitions": [],
+    "role_definitions": []
+}

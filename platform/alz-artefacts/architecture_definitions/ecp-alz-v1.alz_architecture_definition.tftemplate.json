@@ -14,7 +14,8 @@
         },
         {
             "archetypes": [
-                "platform"
+                "platform",
+                "ecp-platform"
             ],
             "display_name": "Platform ${ecp_environment_name}",
             "exists": false,
