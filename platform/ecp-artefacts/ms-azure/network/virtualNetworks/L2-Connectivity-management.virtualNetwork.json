@@ -1,5 +1,7 @@
 {
     "artefactName": "l2-connectivity-management-vnet",
+    "nameElement": "management",
+    
     "addressSpace": {
         "baseAddressOffsets": [
             {
