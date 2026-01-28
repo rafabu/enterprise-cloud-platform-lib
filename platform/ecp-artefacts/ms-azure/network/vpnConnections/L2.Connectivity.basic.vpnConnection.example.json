@@ -1,16 +1,12 @@
 {
     "artefactName": "l2-connectivity-example-vpnConnection",
-
     "location": "default",
-
     "__vpnGateway": {
         "id": "<ECP_ARTEFACT>:l2-connectivity-basic-example-vpnGateway"
     },
-    
     "remoteVpnSite": {
         "id": "<ECP_ARTEFACT>:l2-connectivity-example-bgprouting-vpnsite"
     },
-    
     "vpnLinkConnections": [
         {
             "properties": {
@@ -35,7 +31,14 @@
                 "routingWeight": 0,
                 "dpdTimeoutSeconds": 0,
                 "vpnLinkConnectionMode": "Default",
-                "vpnGatewayCustomBgpAddresses": []
+                "vpnGatewayCustomBgpAddresses": [],
+                "preSharedKey": {
+                    "value": "",
+                    "valueRandom": true,
+                    "valueRandomVersion": "1",
+                    "valueKeyVaultRetrievable": true,
+                    "valueKeyVaultRead": false
+                }
             }
         },
         {

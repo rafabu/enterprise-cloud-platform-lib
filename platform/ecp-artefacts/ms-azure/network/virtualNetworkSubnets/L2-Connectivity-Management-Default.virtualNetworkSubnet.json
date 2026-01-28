@@ -1,0 +1,17 @@
+{
+    "artefactName": "l2-connectivity-management-subnet-default",
+    "name": "default",
+    "virtualNetwork": {
+        "artefactName": "l2-connectivity-management-vnet"
+    },
+    "baseAddressOffsets": [
+        {
+            "netnum": 28,
+            "newbits": 10
+        }
+    ],
+    "defaultOutboundAccess": false,
+    "delegations": [],
+    "privateEndpointNetworkPolicies": "Enabled",
+    "privateLinkServiceNetworkPolicies": "Enabled"
+}

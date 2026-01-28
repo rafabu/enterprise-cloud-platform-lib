@@ -1,0 +1,19 @@
+{
+    "artefactName": "l2-connectivity-management-vnet",
+    "addressSpace": {
+        "baseAddressOffsets": [
+            {
+                "netnum": 28,
+                "newbits": 10
+            }
+        ]
+    },
+    "dhcpOptions": {
+        "dnsServers": []
+    },
+    "encryption": {
+        "enabled": "true",
+        "enforcement": "AllowUnencrypted"
+    },
+    "privateEndpointVNetPolicies": "'Basic"
+}
