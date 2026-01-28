@@ -6,8 +6,8 @@
     },
     "baseAddressOffsets": [
         {
-            "netnum": 28,
-            "newbits": 10
+            "netnum": 56,
+            "newbits": 11
         }
     ],
     "defaultOutboundAccess": false,
