@@ -24,8 +24,7 @@
         },
         {
             "archetypes": [
-                "landing_zones",
-                "landing_zones_override"
+                "landing_zones"
             ],
             "display_name": "Landing Zones ${ecp_environment_name}",
             "exists": false,
@@ -80,8 +79,7 @@
         },
         {
             "archetypes": [
-                "connectivity",
-                "connectivity_override"
+                "connectivity"
             ],
             "display_name": "Connectivity ${ecp_environment_name}",
             "exists": false,
