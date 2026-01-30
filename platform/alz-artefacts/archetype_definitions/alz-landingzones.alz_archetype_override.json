@@ -1,8 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_override.json",
 
-    "name": "alz-landingzones-archetype_override",
-    "base_archetype": "landingzones",
+    "name": "landing_zones_override",
+    "base_archetype": "landing_zones",
     
     "policy_assignments_to_remove": [
         "Enable-DDoS-VNET"
