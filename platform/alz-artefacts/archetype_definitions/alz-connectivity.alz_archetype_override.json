@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_override.json",
+
+    "name": "alz-connectivity-archetype_override",
+    "base_archetype": "connectivity",
+    
+    "policy_assignments_to_remove": [
+        "Enable-DDoS-VNET"
+    ],
+    "policy_definitions_to_remove": [],
+    "policy_set_definitions_to_remove": [],
+    "role_definitions_to_remove": []
+}
