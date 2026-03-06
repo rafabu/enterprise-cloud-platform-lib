@@ -1,0 +1,10 @@
+{
+    "artefactName": "l2-connectivity-vwan-standard-sku",
+    "location": "default",
+
+    "type": "Standard",
+
+    "allowBranchToBranchTraffic": true,
+    "disableVpnEncryption": false,
+    "office365LocalBreakoutCategory": "Optimize"
+}
