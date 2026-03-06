@@ -1,0 +1,31 @@
+{
+    "artefactName": "l2-connectivity-advanced-example-vpngateway",
+
+    "location": "default",
+
+    "bgpSettings": {
+        "asn": 65515,
+        "peerWeight": 0,
+        "bgpPeeringAddresses": [
+            {
+                "ipconfigurationId": "Instance0",
+                "customBgpIpAddresses": [
+                    "169.254.2.253"
+                ]
+            },
+            {
+                "ipconfigurationId": "Instance1",
+                "customBgpIpAddresses": [
+                    "169.254.2.254"
+                ]
+            }
+        ]
+    },
+    "enableBgpRouteTranslationForNat": false,
+    "isRoutingPreferenceInternet": false,
+    "natRules": [],
+    "virtualHub": {
+        "id": "<ECP_ARTEFACT>:l2-connectivity-default-vwan-hub"
+    },
+    "vpnGatewayScaleUnit": 1
+}
