@@ -30,7 +30,7 @@ The JSON format is based on the REST schema of [Azure REST API Vpn Sites](https:
 
 ## Supported Properties
 
-Artefact deployment does use the `azurerm_vpn_site` or `azapi_resource` under the hood. Only the following properties are supported:
+Artefact deployment uses the `azurerm_vpn_site` or `azapi_resource` under the hood. Only the following properties are supported:
 
 - **name**
 - **addressSpace**
