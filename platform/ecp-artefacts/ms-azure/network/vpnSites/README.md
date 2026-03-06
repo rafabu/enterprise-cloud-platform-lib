@@ -26,7 +26,7 @@ Example artefacts shipped in this folder use the pattern `*.vpnSite.example.json
 The JSON format is based on the REST schema of [Azure REST API Vpn Sites](https://learn.microsoft.com/en-us/rest/api/virtualwan/vpn-sites), where the vpnSite resource body is represented as a flattened object containing both top-level fields (for example `name`, `location`, `properties`) and all nested `properties.*` fields. The following additional mandatory properties have to be added on this root object:
 
 - `artefactName` as the unique internal identifier used by the ECP deployment to reference this build definition artefact
-- `nameElement` becoming `displayName`
+- `name` becoming `displayName`
 
 ## Supported Properties
 
