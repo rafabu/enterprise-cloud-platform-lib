@@ -17,6 +17,5 @@
         "enabled": "true",
         "enforcement": "AllowUnencrypted"
     },
-    "privateEndpointVNetPolicies": "Disabled",
-    "privateLinkServiceNetworkPolicies": "Enabled"
+    "privateEndpointVNetPolicies": "Disabled"
 }
