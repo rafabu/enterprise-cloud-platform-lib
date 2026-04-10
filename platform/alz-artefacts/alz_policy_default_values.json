@@ -739,6 +739,19 @@
           "policy_assignment_name": "ECP-Deploy-Private-DNS-Z"
         }
       ]
+    },
+    {
+      "default_name": "key_vault_guardrails_purge_protection_missing_effect",
+      "description": "enables recommended ALZ guardrails for Azure Key Vault",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "effectKvPurgeProtection",
+            "effectKvSoftDelete"
+          ],
+          "policy_assignment_name": "Enforce-GR-KeyVault"
+        }
+      ]
     }
   ]
 }
