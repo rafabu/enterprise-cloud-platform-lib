@@ -52,6 +52,15 @@
         },
         {
             "archetypes": [
+                "local"
+            ],
+            "display_name": "Local ${ecp_environment_name}",
+            "exists": false,
+            "id": "${ecp_environment_name}-mg-ecpa-local",
+            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
+        },
+        {
+            "archetypes": [
                 "sandbox"
             ],
             "display_name": "Sandbox ${ecp_environment_name}",
