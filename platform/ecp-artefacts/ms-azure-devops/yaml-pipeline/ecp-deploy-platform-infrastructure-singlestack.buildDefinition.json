@@ -1,6 +1,6 @@
 {
     "artefactName": "ECP-Deploy-Platform-Infrastructure-SingleStack",
-    "nameElement": "ECP Deploy Platform Infrastructure (single stack) - <TERRAFORM_VARIABLE:ecp_environment_name>",
+    "nameElement": "ECP Deploy Platform Infrastructure (Single Stack) - <TERRAFORM_VARIABLE:ecp_environment_name>",
     "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\deploy_platform",
     "process": {
         "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-tg-deploy-platform-infrastructure-singlestack.yaml"
