@@ -18,13 +18,12 @@
         }
     },
     "skipFirstRun": true,
-    "variables": [
-        {
-            "name": "terragrunt_stack",
+    "variables": {
+        "terragrunt_stack": {
             "value": "",
             "isSecret": false,
             "allowOverride": false
         }
-    ],
+    },
     "triggers": []
 }
