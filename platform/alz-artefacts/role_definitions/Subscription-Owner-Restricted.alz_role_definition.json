@@ -3,7 +3,7 @@
     "type": "Microsoft.Authorization/roleDefinitions",
     "apiVersion": "2022-04-01",
     "properties": {
-        "roleName": "Subscription-Owner",
+        "roleName": "Subscription-Owner-Role-Restricted",
         "description": "Delegated role for subscription owner generated from subscription Owner role. Must be used with a condition to restrict role assignment scope!",
         "type": "CustomRole",
         "permissions": [

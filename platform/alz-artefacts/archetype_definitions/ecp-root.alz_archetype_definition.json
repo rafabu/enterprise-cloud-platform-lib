@@ -13,6 +13,7 @@
         "ECP-Deploy-Sub-PrevFeat"
     ],
     "role_definitions": [
+        "Subscription-Owner-Role-Restricted",
         "Private-DNS-Zone-Record-Contributor"
     ]
 }
