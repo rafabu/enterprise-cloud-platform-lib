@@ -9,6 +9,8 @@
         "permissions": [
             {
                 "actions": [
+                    "Microsoft.Network/privateDnsZones/join/action",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/*",
                     "Microsoft.Network/privateDnsZones/A/*",
                     "Microsoft.Network/privateDnsZones/AAAA/*",
                     "Microsoft.Network/privateDnsZones/CNAME/*",
