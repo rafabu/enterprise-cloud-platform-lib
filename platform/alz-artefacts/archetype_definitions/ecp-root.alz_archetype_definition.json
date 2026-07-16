@@ -9,5 +9,7 @@
     "policy_set_definitions": [
         "ECP-Deploy-Private-DNS-Z"
     ],
-    "role_definitions": []
+    "role_definitions": [
+        "Private-DNS-Zone-Record-Contributor"
+    ]
 }

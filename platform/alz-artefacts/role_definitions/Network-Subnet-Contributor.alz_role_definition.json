@@ -1,0 +1,35 @@
+{
+    "name": "3b918bd3-a074-4e4c-b711-057c64100b93",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2022-04-01",
+    "properties": {
+        "roleName": "Private-DNS-Zone-Record-Contributor",
+        "description": "Enterprise-scale custom Role Definition. Grants full access to manage Private DNS Zone records, but no other network resources.",
+        "type": "CustomRole",
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Network/privateDnsZones/A/*",
+                    "Microsoft.Network/privateDnsZones/AAAA/*",
+                    "Microsoft.Network/privateDnsZones/CNAME/*",
+                    "Microsoft.Network/privateDnsZones/PTR/*",
+                    "Microsoft.Network/privateDnsZones/SRV/*",
+                    "Microsoft.Network/privateDnsZones/TXT/*",
+                    "Microsoft.Network/privateDnsZones/read",
+                    "Microsoft.Authorization/*/read",
+                    "Microsoft.Insights/alertRules/*",
+                    "Microsoft.ResourceHealth/availabilityStatuses/read",
+                    "Microsoft.Resources/deployments/*",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Support/*"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "${current_scope_resource_id}"
+        ]
+    }
+}
