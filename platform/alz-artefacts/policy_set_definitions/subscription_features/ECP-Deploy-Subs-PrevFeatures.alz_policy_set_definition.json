@@ -1,0 +1,48 @@
+{
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "apiVersion": "2025-03-01",
+    "name": "ECP-Deploy-Sub-PrevFeat",
+    "properties": {
+        "displayName": "Configure subscriptions to set up preview features",
+        "description": "This policy set evaluates existing subscription's preview features. Subscriptions can be remediated to register to a new preview feature. New subscriptions will not be automatically registered.",
+        "metadata": {
+            "alzCloudEnvironments": [
+                "AzureCloud"
+            ],
+            "version": "1.0.0",
+            "category": "General"
+        },
+        "parameters": {
+            "effectMicrosoftComputeEncryptionAtHost": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Effect (Microsoft.Compute/encryptionathost)",
+                    "description": "Enable or disable the execution of the policy for Microsoft.Compute/encryptionathost"
+                },
+                "allowedValues": [
+                    "DeployIfNotExists",
+                    "Disabled"
+                ],
+                "defaultValue": "Disabled"
+            }
+        },
+        "policyDefinitions": [
+            {
+                "policyDefinitionReferenceId": "registerMicrosoftComputeEncryptionAtHost",
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e624c84f-2923-4437-9fd9-4115c6da3888",
+                "parameters": {
+                    "effect": {
+                        "value": "[parameters('effectMicrosoftComputeEncryptionAtHost')]"
+                    },
+                    "featureName": {
+                        "value": "encryptionathost"
+                    },
+                    "resourceProviderName": {
+                        "value": "Microsoft.Compute"
+                    }
+                }
+            }
+        ],
+        "policyType": "Custom"
+    }
+}
