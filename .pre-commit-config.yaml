@@ -16,5 +16,5 @@ repos:
           - --autofix
           - --no-sort-keys
       - id: trailing-whitespace
-  
+
 minimum_pre_commit_version: '4.6.0'
