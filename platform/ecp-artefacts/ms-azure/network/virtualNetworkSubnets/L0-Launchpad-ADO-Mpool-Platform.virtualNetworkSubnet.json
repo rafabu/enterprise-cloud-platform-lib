@@ -1,17 +1,17 @@
 {
-    "artefactName": "l0-launchpad-ado-mpool-platform",
-    "name": "ado-mpool-platform",
-    "virtualNetwork": {
-        "artefactName": "l0-launchpad-main"
-    },
-    "baseAddressOffsets": [
-        {
-            "netnum": 196,
-            "newbits": 12
-        }
-    ],
-    "defaultOutboundAccess": false,
-    "delegations": [],
-    "privateEndpointNetworkPolicies": "Disabled",
-    "privateLinkServiceNetworkPolicies": "Enabled"
+  "artefactName": "l0-launchpad-ado-mpool-platform",
+  "name": "ado-mpool-platform",
+  "virtualNetwork": {
+    "artefactName": "l0-launchpad-main"
+  },
+  "baseAddressOffsets": [
+    {
+      "netnum": 196,
+      "newbits": 12
+    }
+  ],
+  "defaultOutboundAccess": false,
+  "delegations": [],
+  "privateEndpointNetworkPolicies": "Disabled",
+  "privateLinkServiceNetworkPolicies": "Enabled"
 }

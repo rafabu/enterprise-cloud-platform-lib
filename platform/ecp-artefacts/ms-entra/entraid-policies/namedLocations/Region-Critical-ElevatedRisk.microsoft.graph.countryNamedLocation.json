@@ -1,20 +1,20 @@
 {
-    "artefactName": "Country-Critical-Elevated",
-    "displayName": "Region: Critical - elevated risk",
-    "countriesAndRegions": [
-        "KI",
-        "SB",
-        "TV",
-        "TO",
-        "WS",
-        "VU",
-        "FJ",
-        "FM",
-        "MH",
-        "PW",
-        "NR",
-        "PG"
-    ],
-    "includeUnknownCountriesAndRegions": false,
-    "countryLookupMethod": "clientIpAddress"
+  "artefactName": "Country-Critical-Elevated",
+  "displayName": "Region: Critical - elevated risk",
+  "countriesAndRegions": [
+    "KI",
+    "SB",
+    "TV",
+    "TO",
+    "WS",
+    "VU",
+    "FJ",
+    "FM",
+    "MH",
+    "PW",
+    "NR",
+    "PG"
+  ],
+  "includeUnknownCountriesAndRegions": false,
+  "countryLookupMethod": "clientIpAddress"
 }

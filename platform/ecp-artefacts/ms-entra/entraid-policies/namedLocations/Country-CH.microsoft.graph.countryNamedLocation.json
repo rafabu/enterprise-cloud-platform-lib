@@ -1,9 +1,9 @@
 {
-    "artefactName": "Country-CH",
-    "displayName": "Country: CH (Switzerland)",
-    "countriesAndRegions": [
-        "CH"
-    ],
-    "includeUnknownCountriesAndRegions": false,
-    "countryLookupMethod": "clientIpAddress"
+  "artefactName": "Country-CH",
+  "displayName": "Country: CH (Switzerland)",
+  "countriesAndRegions": [
+    "CH"
+  ],
+  "includeUnknownCountriesAndRegions": false,
+  "countryLookupMethod": "clientIpAddress"
 }

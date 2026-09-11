@@ -1,21 +1,20 @@
 {
-    "artefactName": "l2-connectivity-bastion-vnet",
-    "nameElement": "bastion",
-
-    "addressSpace": {
-        "baseAddressOffsets": [
-            {
-                "netnum": 4,
-                "newbits": 8
-            }
-        ]
-    },
-    "dhcpOptions": {
-        "dnsServers": []
-    },
-    "encryption": {
-        "enabled": "true",
-        "enforcement": "AllowUnencrypted"
-    },
-    "privateEndpointVNetPolicies": "Disabled"
+  "artefactName": "l2-connectivity-bastion-vnet",
+  "nameElement": "bastion",
+  "addressSpace": {
+    "baseAddressOffsets": [
+      {
+        "netnum": 4,
+        "newbits": 8
+      }
+    ]
+  },
+  "dhcpOptions": {
+    "dnsServers": []
+  },
+  "encryption": {
+    "enabled": "true",
+    "enforcement": "AllowUnencrypted"
+  },
+  "privateEndpointVNetPolicies": "Disabled"
 }

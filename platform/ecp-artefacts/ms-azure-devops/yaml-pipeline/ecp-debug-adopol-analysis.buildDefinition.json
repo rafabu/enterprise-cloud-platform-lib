@@ -1,25 +1,25 @@
 {
-    "artefactName": "ECP-Debug-ADOPool-Analysis",
-    "nameElement": "ECP ADO Agent Pool Analysis - <TERRAFORM_VARIABLE:ecp_environment_name>",
-    "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\insights",
-    "process": {
-        "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-debug-adopool-analysis.yaml"
-    },
-    "project": {
-        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
-    },
-    "queue": {
-        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_pool_name>"
-    },
-    "queueStatus": "enabled",
-    "repository": {
-        "defaultBranch": "refs/heads/main",
-       "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
-        "type": "TfsGit",
-        "properties": {
-            "reportBuildStatus": "true"
-        }
-    },
-    "skipFirstRun": true,
-    "triggers": []
+  "artefactName": "ECP-Debug-ADOPool-Analysis",
+  "nameElement": "ECP ADO Agent Pool Analysis - <TERRAFORM_VARIABLE:ecp_environment_name>",
+  "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\insights",
+  "process": {
+    "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-debug-adopool-analysis.yaml"
+  },
+  "project": {
+    "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
+  },
+  "queue": {
+    "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_pool_name>"
+  },
+  "queueStatus": "enabled",
+  "repository": {
+    "defaultBranch": "refs/heads/main",
+    "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
+    "type": "TfsGit",
+    "properties": {
+      "reportBuildStatus": "true"
+    }
+  },
+  "skipFirstRun": true,
+  "triggers": []
 }

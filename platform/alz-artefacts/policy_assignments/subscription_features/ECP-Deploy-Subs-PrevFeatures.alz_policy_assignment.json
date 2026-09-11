@@ -1,28 +1,28 @@
 {
-    "type": "Microsoft.Authorization/policyAssignments",
-    "apiVersion": "2025-03-01",
-    "name": "ECP-Deploy-Sub-PrevFeat",
-    "location": "${default_location}",
-    "dependsOn": [],
-    "identity": {
-        "type": "SystemAssigned"
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2025-03-01",
+  "name": "ECP-Deploy-Sub-PrevFeat",
+  "location": "${default_location}",
+  "dependsOn": [],
+  "identity": {
+    "type": "SystemAssigned"
+  },
+  "properties": {
+    "displayName": "Configure subscriptions to set up preview features",
+    "description": "This policy set evaluates existing subscription's preview features. Subscriptions can be remediated to register to a new preview feature. New subscriptions will not be automatically registered.",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/placeholder/providers/Microsoft.Authorization/policySetDefinitions/ECP-Deploy-Sub-PrevFeat",
+    "enforcementMode": "Default",
+    "nonComplianceMessages": [
+      {
+        "message": "Subscription Preview Fetures {enforcementMode} be registered."
+      }
+    ],
+    "parameters": {
+      "effectMicrosoftComputeEncryptionAtHost": {
+        "value": "DeployIfNotExists"
+      }
     },
-    "properties": {
-        "displayName": "Configure subscriptions to set up preview features",
-        "description": "This policy set evaluates existing subscription's preview features. Subscriptions can be remediated to register to a new preview feature. New subscriptions will not be automatically registered.",
-        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/placeholder/providers/Microsoft.Authorization/policySetDefinitions/ECP-Deploy-Sub-PrevFeat",
-        "enforcementMode": "Default",
-        "nonComplianceMessages": [
-            {
-                "message": "Subscription Preview Fetures {enforcementMode} be registered."
-            }
-        ],
-        "parameters": {
-            "effectMicrosoftComputeEncryptionAtHost": {
-                "value": "DeployIfNotExists"
-            }
-        },
-        "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
-        "notScopes": []
-    }
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
 }

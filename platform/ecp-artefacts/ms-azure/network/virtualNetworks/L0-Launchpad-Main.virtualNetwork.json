@@ -1,19 +1,19 @@
 {
-    "artefactName": "l0-launchpad-main",
-    "addressSpace": {
-        "baseAddressOffsets": [
-            {
-                "netnum": 24,
-                "newbits": 9
-            }
-        ]
-    },
-    "dhcpOptions": {
-        "dnsServers": []
-    },
-    "encryption": {
-        "enabled": "true",
-        "enforcement": "AllowUnencrypted"
-    },
-    "privateEndpointVNetPolicies": "Disabled"
+  "artefactName": "l0-launchpad-main",
+  "addressSpace": {
+    "baseAddressOffsets": [
+      {
+        "netnum": 24,
+        "newbits": 9
+      }
+    ]
+  },
+  "dhcpOptions": {
+    "dnsServers": []
+  },
+  "encryption": {
+    "enabled": "true",
+    "enforcement": "AllowUnencrypted"
+  },
+  "privateEndpointVNetPolicies": "Disabled"
 }

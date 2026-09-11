@@ -1,23 +1,23 @@
 {
-    "artefactName": "__example",
-    "nameElement": "main(optional)",
-    "addressSpace": {
-        "addressPrefixes": [
-            "10.0.0.0/24"
-        ],
-        "baseAddressOffsets": [
-            {
-                "netnum": 12,
-                "newbits": 8
-            }
-        ]
-    },
-    "dhcpOptions": {
-        "dnsServers": []
-    },
-    "encryption": {
-        "enabled": "true",
-        "enforcement": "AllowUnencrypted"
-    },
-    "privateEndpointVNetPolicies": "Disabled"
+  "artefactName": "__example",
+  "nameElement": "main(optional)",
+  "addressSpace": {
+    "addressPrefixes": [
+      "10.0.0.0/24"
+    ],
+    "baseAddressOffsets": [
+      {
+        "netnum": 12,
+        "newbits": 8
+      }
+    ]
+  },
+  "dhcpOptions": {
+    "dnsServers": []
+  },
+  "encryption": {
+    "enabled": "true",
+    "enforcement": "AllowUnencrypted"
+  },
+  "privateEndpointVNetPolicies": "Disabled"
 }

@@ -1,27 +1,27 @@
 {
-    "artefactName": "l2-connectivity-vnet-hub",
-    "addressSpace": {
-        "baseAddressOffsets": [
-            {
-                "netnum": 1,
-                "newbits": 7
-            },
-            {
-                "netnum": 1,
-                "newbits": 6
-            },
-            {
-                "netnum": 1,
-                "newbits": 4
-            }
-        ]
-    },
-    "dhcpOptions": {
-        "dnsServers": []
-    },
-    "encryption": {
-        "enabled": "true",
-        "enforcement": "AllowUnencrypted"
-    },
-    "privateEndpointVNetPolicies": "Disabled"
+  "artefactName": "l2-connectivity-vnet-hub",
+  "addressSpace": {
+    "baseAddressOffsets": [
+      {
+        "netnum": 1,
+        "newbits": 7
+      },
+      {
+        "netnum": 1,
+        "newbits": 6
+      },
+      {
+        "netnum": 1,
+        "newbits": 4
+      }
+    ]
+  },
+  "dhcpOptions": {
+    "dnsServers": []
+  },
+  "encryption": {
+    "enabled": "true",
+    "enforcement": "AllowUnencrypted"
+  },
+  "privateEndpointVNetPolicies": "Disabled"
 }

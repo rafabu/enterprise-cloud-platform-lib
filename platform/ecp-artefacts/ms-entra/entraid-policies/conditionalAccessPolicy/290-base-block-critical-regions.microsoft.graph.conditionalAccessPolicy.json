@@ -1,59 +1,59 @@
 {
-    "artefactName": "base-block-critical-regions",
-    "displayName": "290 - all - base protection - all apps: block access from critical regions",
-    "state": "enabled",
-    "sessionControls": null,
-    "conditions": {
-        "userRiskLevels": [],
-        "signInRiskLevels": [],
-        "clientAppTypes": [
-            "all"
-        ],
-        "servicePrincipalRiskLevels": [],
-        "insiderRiskLevels": null,
-        "platforms": null,
-        "devices": null,
-        "clientApplications": null,
-        "authenticationFlows": null,
-        "applications": {
-            "includeApplications": [
-                "All"
-            ],
-            "excludeApplications": [],
-            "includeUserActions": [],
-            "includeAuthenticationContextClassReferences": [],
-            "applicationFilter": null
-        },
-        "users": {
-            "includeUsers": [
-                "All"
-            ],
-            "excludeUsers": [
-                "<USERPRINCIPALNAME>:padmin@3jf0g8.onmicrosoft.com"
-            ],
-            "includeGroups": [],
-            "excludeGroups": [],
-            "includeRoles": [],
-            "excludeRoles": [],
-            "includeGuestsOrExternalUsers": null,
-            "excludeGuestsOrExternalUsers": null
-        },
-        "locations": {
-            "includeLocations": [
-                "<ECP_ARTEFACT>:Country-Critical-High",
-                "<ECP_ARTEFACT>:Country-Critical-Medium",
-                "<ECP_ARTEFACT>:Country-Critical-Elevated"
-            ],
-            "excludeLocations": []
-        }
+  "artefactName": "base-block-critical-regions",
+  "displayName": "290 - all - base protection - all apps: block access from critical regions",
+  "state": "enabled",
+  "sessionControls": null,
+  "conditions": {
+    "userRiskLevels": [],
+    "signInRiskLevels": [],
+    "clientAppTypes": [
+      "all"
+    ],
+    "servicePrincipalRiskLevels": [],
+    "insiderRiskLevels": null,
+    "platforms": null,
+    "devices": null,
+    "clientApplications": null,
+    "authenticationFlows": null,
+    "applications": {
+      "includeApplications": [
+        "All"
+      ],
+      "excludeApplications": [],
+      "includeUserActions": [],
+      "includeAuthenticationContextClassReferences": [],
+      "applicationFilter": null
     },
-    "grantControls": {
-        "operator": "OR",
-        "builtInControls": [
-            "block"
-        ],
-        "customAuthenticationFactors": [],
-        "termsOfUse": [],
-        "authenticationStrength": null
+    "users": {
+      "includeUsers": [
+        "All"
+      ],
+      "excludeUsers": [
+        "<USERPRINCIPALNAME>:padmin@3jf0g8.onmicrosoft.com"
+      ],
+      "includeGroups": [],
+      "excludeGroups": [],
+      "includeRoles": [],
+      "excludeRoles": [],
+      "includeGuestsOrExternalUsers": null,
+      "excludeGuestsOrExternalUsers": null
+    },
+    "locations": {
+      "includeLocations": [
+        "<ECP_ARTEFACT>:Country-Critical-High",
+        "<ECP_ARTEFACT>:Country-Critical-Medium",
+        "<ECP_ARTEFACT>:Country-Critical-Elevated"
+      ],
+      "excludeLocations": []
     }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [
+      "block"
+    ],
+    "customAuthenticationFactors": [],
+    "termsOfUse": [],
+    "authenticationStrength": null
+  }
 }

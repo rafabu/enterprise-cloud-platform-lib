@@ -1,48 +1,48 @@
 {
-    "name": "1c20d30f-c680-4326-a6f6-7634779c5ad2",
-    "type": "Microsoft.Authorization/roleDefinitions",
-    "apiVersion": "2022-04-01",
-    "properties": {
-        "roleName": "Subscription-Owner-Role-Restricted",
-        "description": "Delegated role for subscription owner generated from subscription Owner role. Must be used with a condition to restrict role assignment scope!",
-        "type": "CustomRole",
-        "permissions": [
-            {
-                "actions": [
-                    "*"
-                ],
-                "notActions": [
-                    "Microsoft.Network/connections/*",
-                    "Microsoft.Network/dscpConfiguration/*",
-                    "Microsoft.Network/expressRouteCircuits/*",
-                    "Microsoft.Network/expressRouteCrossConnections/*",
-                    "Microsoft.Network/expressRouteGateways/*",
-                    "Microsoft.Network/expressRoutePorts/*",
-                    "Microsoft.Network/localnetworkgateways/*",
-                    "Microsoft.Network/p2sVpnGateways/*",
-                    "Microsoft.Network/routeTables/delete",
-                    "Microsoft.Network/routeTables/write",
-                    "Microsoft.Network/routeTables/routes/delete",
-                    "Microsoft.Network/routeTables/routes/write",
-                    "Microsoft.Network/virtualHubs/*",
-                    "Microsoft.Network/virtualNetworkGateways/*",
-                    "Microsoft.Network/virtualNetworks/delete",
-                    "Microsoft.Network/virtualNetworks/write",
-                    "Microsoft.Network/virtualNetworks/peer/action",
-                    "Microsoft.Network/virtualNetworks/virtualNetworkPeerings/delete",
-                    "Microsoft.Network/virtualNetworks/virtualNetworkPeerings/write",
-                    "Microsoft.Network/virtualRouters/*",
-                    "Microsoft.Network/virtualWans/*",
-                    "Microsoft.Network/vpnGateways/*",
-                    "Microsoft.Network/vpnServerConfigurations/*",
-                    "Microsoft.Network/vpnSites/*"
-                ],
-                "dataActions": [],
-                "notDataActions": []
-            }
+  "name": "1c20d30f-c680-4326-a6f6-7634779c5ad2",
+  "type": "Microsoft.Authorization/roleDefinitions",
+  "apiVersion": "2022-04-01",
+  "properties": {
+    "roleName": "Subscription-Owner-Role-Restricted",
+    "description": "Delegated role for subscription owner generated from subscription Owner role. Must be used with a condition to restrict role assignment scope!",
+    "type": "CustomRole",
+    "permissions": [
+      {
+        "actions": [
+          "*"
         ],
-        "assignableScopes": [
-            "${current_scope_resource_id}"
-        ]
-    }
+        "notActions": [
+          "Microsoft.Network/connections/*",
+          "Microsoft.Network/dscpConfiguration/*",
+          "Microsoft.Network/expressRouteCircuits/*",
+          "Microsoft.Network/expressRouteCrossConnections/*",
+          "Microsoft.Network/expressRouteGateways/*",
+          "Microsoft.Network/expressRoutePorts/*",
+          "Microsoft.Network/localnetworkgateways/*",
+          "Microsoft.Network/p2sVpnGateways/*",
+          "Microsoft.Network/routeTables/delete",
+          "Microsoft.Network/routeTables/write",
+          "Microsoft.Network/routeTables/routes/delete",
+          "Microsoft.Network/routeTables/routes/write",
+          "Microsoft.Network/virtualHubs/*",
+          "Microsoft.Network/virtualNetworkGateways/*",
+          "Microsoft.Network/virtualNetworks/delete",
+          "Microsoft.Network/virtualNetworks/write",
+          "Microsoft.Network/virtualNetworks/peer/action",
+          "Microsoft.Network/virtualNetworks/virtualNetworkPeerings/delete",
+          "Microsoft.Network/virtualNetworks/virtualNetworkPeerings/write",
+          "Microsoft.Network/virtualRouters/*",
+          "Microsoft.Network/virtualWans/*",
+          "Microsoft.Network/vpnGateways/*",
+          "Microsoft.Network/vpnServerConfigurations/*",
+          "Microsoft.Network/vpnSites/*"
+        ],
+        "dataActions": [],
+        "notDataActions": []
+      }
+    ],
+    "assignableScopes": [
+      "${current_scope_resource_id}"
+    ]
+  }
 }

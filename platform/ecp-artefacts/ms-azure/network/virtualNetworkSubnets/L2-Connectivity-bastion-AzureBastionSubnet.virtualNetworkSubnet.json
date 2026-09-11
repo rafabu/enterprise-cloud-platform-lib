@@ -1,17 +1,17 @@
 {
-    "artefactName": "l2-connectivity-bastion-subnet-azurebastionsubnet",
-    "name": "AzureBastionSubnet",
-    "virtualNetwork": {
-        "artefactName": "l2-connectivity-bastion-vnet"
-    },
-    "baseAddressOffsets": [
-        {
-            "netnum": 4,
-            "newbits": 8
-        }
-    ],
-    "defaultOutboundAccess": false,
-    "delegations": [],
-    "privateEndpointNetworkPolicies": "Disabled",
-    "privateLinkServiceNetworkPolicies": "Enabled"
+  "artefactName": "l2-connectivity-bastion-subnet-azurebastionsubnet",
+  "name": "AzureBastionSubnet",
+  "virtualNetwork": {
+    "artefactName": "l2-connectivity-bastion-vnet"
+  },
+  "baseAddressOffsets": [
+    {
+      "netnum": 4,
+      "newbits": 8
+    }
+  ],
+  "defaultOutboundAccess": false,
+  "delegations": [],
+  "privateEndpointNetworkPolicies": "Disabled",
+  "privateLinkServiceNetworkPolicies": "Enabled"
 }

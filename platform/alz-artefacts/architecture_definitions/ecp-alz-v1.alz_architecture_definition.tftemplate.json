@@ -1,126 +1,126 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/architecture_definition.json",
-    "name": "ecp-alz-v1",
-    "management_groups": [
-        {
-            "archetypes": [
-                "root_overrides",
-                "ecp-root"
-            ],
-            "display_name": "Deployment ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-deployment",
-            "parent_id": null
-        },
-        {
-            "archetypes": [
-                "platform",
-                "ecp-platform"
-            ],
-            "display_name": "Platform ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
-        },
-        {
-            "archetypes": [
-                "landing_zones_override"
-            ],
-            "display_name": "Landing Zones ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-landingzones",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
-        },
-        {
-            "archetypes": [
-                "corp",
-                "ecp-corp"
-            ],
-            "display_name": "Corp ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-landingzones-corp",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
-        },
-        {
-            "archetypes": [
-                "online"
-            ],
-            "display_name": "Online ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-landingzones-online",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
-        },
-        {
-            "archetypes": [
-                "local"
-            ],
-            "display_name": "Local ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-local",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
-        },
-        {
-            "archetypes": [
-                "sandbox"
-            ],
-            "display_name": "Sandbox ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-sandbox",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
-        },
-        {
-            "archetypes": [
-                "security"
-            ],
-            "display_name": "Security ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform-security",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
-        },
-        {
-            "archetypes": [
-                "management"
-            ],
-            "display_name": "Management ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform-management",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
-        },
-        {
-            "archetypes": [
-                "connectivity_override"
-            ],
-            "display_name": "Connectivity ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform-connectivity",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
-        },
-        {
-            "archetypes": [
-                "identity"
-            ],
-            "display_name": "Identity ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform-identity",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
-        },
-        {
-            "archetypes": [
-                "ecp-launchpad"
-            ],
-            "display_name": "Launchpad ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-platform-launchpad",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
-        },
-        {
-            "archetypes": [
-                "decommissioned"
-            ],
-            "display_name": "Decommissioned ${ecp_environment_name}",
-            "exists": false,
-            "id": "${ecp_environment_name}-mg-ecpa-decommissioned",
-            "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
-        }
-    ]
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/architecture_definition.json",
+  "name": "ecp-alz-v1",
+  "management_groups": [
+    {
+      "archetypes": [
+        "root_overrides",
+        "ecp-root"
+      ],
+      "display_name": "Deployment ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-deployment",
+      "parent_id": null
+    },
+    {
+      "archetypes": [
+        "platform",
+        "ecp-platform"
+      ],
+      "display_name": "Platform ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
+    },
+    {
+      "archetypes": [
+        "landing_zones_override"
+      ],
+      "display_name": "Landing Zones ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-landingzones",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
+    },
+    {
+      "archetypes": [
+        "corp",
+        "ecp-corp"
+      ],
+      "display_name": "Corp ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-landingzones-corp",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
+    },
+    {
+      "archetypes": [
+        "online"
+      ],
+      "display_name": "Online ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-landingzones-online",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
+    },
+    {
+      "archetypes": [
+        "local"
+      ],
+      "display_name": "Local ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-local",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-landingzones"
+    },
+    {
+      "archetypes": [
+        "sandbox"
+      ],
+      "display_name": "Sandbox ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-sandbox",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
+    },
+    {
+      "archetypes": [
+        "security"
+      ],
+      "display_name": "Security ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform-security",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
+    },
+    {
+      "archetypes": [
+        "management"
+      ],
+      "display_name": "Management ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform-management",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
+    },
+    {
+      "archetypes": [
+        "connectivity_override"
+      ],
+      "display_name": "Connectivity ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform-connectivity",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
+    },
+    {
+      "archetypes": [
+        "identity"
+      ],
+      "display_name": "Identity ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform-identity",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
+    },
+    {
+      "archetypes": [
+        "ecp-launchpad"
+      ],
+      "display_name": "Launchpad ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-platform-launchpad",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-platform"
+    },
+    {
+      "archetypes": [
+        "decommissioned"
+      ],
+      "display_name": "Decommissioned ${ecp_environment_name}",
+      "exists": false,
+      "id": "${ecp_environment_name}-mg-ecpa-decommissioned",
+      "parent_id": "${ecp_environment_name}-mg-ecpa-deployment"
+    }
+  ]
 }

@@ -1,29 +1,29 @@
 {
-    "artefactName": "ECP-Deploy-Landing-Zone",
-    "nameElement": "ECP Deploy Landing Zone (all) - <TERRAFORM_VARIABLE:ecp_environment_name>",
-    "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\deploy_workloads",
-    "process": {
-        "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-tg-deploy-landing-zone.yaml"
-    },
-    "project": {
-        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
-    },
-    "queueStatus": "enabled",
-    "repository": {
-        "defaultBranch": "refs/heads/main",
-        "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
-        "type": "TfsGit",
-        "properties": {
-            "reportBuildStatus": "true"
-        }
-    },
-    "skipFirstRun": true,
-    "variables": {
-        "terragrunt_stack": {
-            "value": "",
-            "isSecret": false,
-            "allowOverride": false
-        }
-    },
-    "triggers": []
+  "artefactName": "ECP-Deploy-Landing-Zone",
+  "nameElement": "ECP Deploy Landing Zone (all) - <TERRAFORM_VARIABLE:ecp_environment_name>",
+  "path": "\\ECP\\<TERRAFORM_VARIABLE:ecp_environment_name>\\deploy_workloads",
+  "process": {
+    "yamlFilename": "/pipelines-<TERRAFORM_VARIABLE:ecp_environment_name>-ado/ecp-tg-deploy-landing-zone.yaml"
+  },
+  "project": {
+    "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_project_name>"
+  },
+  "queueStatus": "enabled",
+  "repository": {
+    "defaultBranch": "refs/heads/main",
+    "name": "<TERRAFORM_VARIABLE:ecp_azure_devops_repository_name>",
+    "type": "TfsGit",
+    "properties": {
+      "reportBuildStatus": "true"
+    }
+  },
+  "skipFirstRun": true,
+  "variables": {
+    "terragrunt_stack": {
+      "value": "",
+      "isSecret": false,
+      "allowOverride": false
+    }
+  },
+  "triggers": []
 }

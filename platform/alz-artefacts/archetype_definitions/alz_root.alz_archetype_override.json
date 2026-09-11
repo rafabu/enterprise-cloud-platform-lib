@@ -1,20 +1,16 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_definition.json",
-    "name": "root_overrides",
-    "base_archetype": "root",
-    "description": "Overrides for the root archetype.",
-    "policy_assignments_to_add": [
-    ],
-    "policy_assignments_to_remove": [
-    ],
-    "policy_definitions_to_add": [
-    ],
-    "policy_definitions_to_remove": [],
-    "policy_set_definitions_to_add": [
-    ],
-    "policy_set_definitions_to_remove": [],
-    "role_definitions_to_add": [],
-    "role_definitions_to_remove": [
-        "Subscription-Owner"
-    ]
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_definition.json",
+  "name": "root_overrides",
+  "base_archetype": "root",
+  "description": "Overrides for the root archetype.",
+  "policy_assignments_to_add": [],
+  "policy_assignments_to_remove": [],
+  "policy_definitions_to_add": [],
+  "policy_definitions_to_remove": [],
+  "policy_set_definitions_to_add": [],
+  "policy_set_definitions_to_remove": [],
+  "role_definitions_to_add": [],
+  "role_definitions_to_remove": [
+    "Subscription-Owner"
+  ]
 }

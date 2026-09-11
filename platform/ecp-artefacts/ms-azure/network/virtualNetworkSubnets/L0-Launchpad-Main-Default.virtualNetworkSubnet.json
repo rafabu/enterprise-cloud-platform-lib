@@ -1,17 +1,17 @@
 {
-    "artefactName": "l0-launchpad-main-default",
-    "name": "default",
-    "virtualNetwork": {
-        "artefactName": "l0-launchpad-main"
-    },
-    "baseAddressOffsets": [
-        {
-            "netnum": 48,
-            "newbits": 10
-        }
-    ],
-    "defaultOutboundAccess": false,
-    "delegations": [],
-    "privateEndpointNetworkPolicies": "Disabled",
-    "privateLinkServiceNetworkPolicies": "Enabled"
+  "artefactName": "l0-launchpad-main-default",
+  "name": "default",
+  "virtualNetwork": {
+    "artefactName": "l0-launchpad-main"
+  },
+  "baseAddressOffsets": [
+    {
+      "netnum": 48,
+      "newbits": 10
+    }
+  ],
+  "defaultOutboundAccess": false,
+  "delegations": [],
+  "privateEndpointNetworkPolicies": "Disabled",
+  "privateLinkServiceNetworkPolicies": "Enabled"
 }
