@@ -19,16 +19,16 @@
     ],
     "parameters": {
       "azureCognitiveServicesPrivateDnsZoneId": {
-        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.cognitiveservices.azure.com"
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/privatelink.cognitiveservices.azure.com"
       },
       "azureOpenAiPrivateDnsZoneId": {
-        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com"
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com"
       },
       "azureAiServicesPrivateDnsZoneId": {
-        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.services.ai.azure.com"
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/privatelink.services.ai.azure.com"
       },
       "azureApiManagementPrivateDnsZoneId": {
-        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/providers/Microsoft.Network/privateDnsZones/privatelink.azure-api.net"
+        "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/placeholder/providers/Microsoft.Network/privateDnsZones/privatelink.azure-api.net"
       }
     },
     "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
