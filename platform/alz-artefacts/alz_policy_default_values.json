@@ -752,6 +752,49 @@
           "policy_assignment_name": "Enforce-GR-KeyVault"
         }
       ]
+    },
+    {
+      "default_name": "ama_user_assigned_managed_identity_id",
+      "description": "The user assigned managed identity id that should be used for the AMA deployment.",
+      "policy_assignments": [
+        {
+          "parameter_names": [
+            "vM_UAI_DINEUserAssignedIdentityResourceId",
+            "vMSS_UAI_DINEUserAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "ECP-Deploy-MCSB2-Mon"
+        },
+        {
+          "parameter_names": [
+            "userAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "Deploy-VM-ChangeTrack"
+        },
+        {
+          "parameter_names": [
+            "userAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "Deploy-VMSS-ChangeTrack"
+        },
+        {
+          "parameter_names": [
+            "userAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "Deploy-VM-Monitoring"
+        },
+        {
+          "parameter_names": [
+            "userAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "Deploy-VMSS-Monitoring"
+        },
+        {
+          "parameter_names": [
+            "userAssignedIdentityResourceId"
+          ],
+          "policy_assignment_name": "Deploy-MDFC-DefSQL-AMA"
+        }
+      ]
     }
   ]
 }
