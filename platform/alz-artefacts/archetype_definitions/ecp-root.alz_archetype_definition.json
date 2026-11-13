@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_definition.json",
   "name": "ecp-root",
   "policy_assignments": [
+    "ECP-Deploy-MCSB2-Mon",
     "ECP-Deploy-Sub-PrevFeat"
   ],
   "policy_definitions": [
@@ -9,6 +10,7 @@
     "ECP-DINE-Private-DNS-Azure-API-Management"
   ],
   "policy_set_definitions": [
+    "ECP-Deploy-MCSB2-Monitoring-AddOn",
     "ECP-Deploy-Private-DNS-Z",
     "ECP-Deploy-Sub-PrevFeat"
   ],
