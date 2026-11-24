@@ -6,7 +6,7 @@
   "path": "platform/slz-artefacts",
   "dependencies": [
     {
-      "custom_url": "file::${alz_library_path_base}/alz-artefacts/?archive=false"
+      "custom_url": "file::${alz_library_path_base}alz-artefacts/?archive=false"
     }
   ]
 }
