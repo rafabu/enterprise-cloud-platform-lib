@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/library_metadata.json",
+  "name": "ecp-slz-v1",
+  "display_name": "Enterprise Cloud Platform SLZ",
+  "description": "This library provides the reference set of Enterprise Cloud Platform (ECP) SLZ policies, archetypes, and management group architecture.",
+  "path": "platform/slz-artefacts",
+  "dependencies": [
+    {
+      "custom_url": "file::${alz_library_path_base}/alz-artefacts/?archive=false"
+    }
+  ]
+}

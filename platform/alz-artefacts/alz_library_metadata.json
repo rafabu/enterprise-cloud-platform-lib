@@ -4,10 +4,5 @@
   "display_name": "Enterprise Cloud Platform ALZ",
   "description": "This library provides the reference set of Enterprise Cloud Platform (ECP) ALZ policies, archetypes, and management group architecture.",
   "path": "platform/alz-artefacts",
-  "dependencies": [
-    {
-      "path": "platform/alz",
-      "ref": "2026.08.1"
-    }
-  ]
+  "dependencies": []
 }
