@@ -1,0 +1,8 @@
+{
+  "artefactName": "l2-connectivity-firewallpolicy-premium-sku",
+  "nameElement": "",
+  "location": "default",
+  "sku": {
+    "tier": "Premium"
+  }
+}

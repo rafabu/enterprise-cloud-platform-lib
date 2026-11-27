@@ -1,0 +1,9 @@
+{
+  "artefactName": "l2-connectivity-firewall-premium-sku",
+  "nameElement": "",
+  "location": "default",
+  "sku": {
+    "tier": "Premium"
+  },
+  "additionalProperties": {}
+}

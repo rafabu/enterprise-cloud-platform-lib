@@ -1,0 +1,9 @@
+{
+  "artefactName": "l2-connectivity-firewall-standard-sku",
+  "nameElement": "",
+  "location": "default",
+  "sku": {
+    "tier": "Standard"
+  },
+  "additionalProperties": {}
+}

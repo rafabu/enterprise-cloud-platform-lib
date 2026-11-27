@@ -1,0 +1,8 @@
+{
+  "artefactName": "l2-connectivity-firewallpolicy-basic-sku",
+  "nameElement": "",
+  "location": "default",
+  "sku": {
+    "tier": "Basic"
+  }
+}
