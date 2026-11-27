@@ -5,5 +5,10 @@
   "sku": {
     "tier": "Standard"
   },
+  "hubIPAddresses": {
+    "publicIPs": {
+      "count": 1
+    }
+  },
   "additionalProperties": {}
 }

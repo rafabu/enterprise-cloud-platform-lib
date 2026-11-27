@@ -5,5 +5,10 @@
   "sku": {
     "tier": "Premium"
   },
+  "hubIPAddresses": {
+    "publicIPs": {
+      "count": 1
+    }
+  },
   "additionalProperties": {}
 }
